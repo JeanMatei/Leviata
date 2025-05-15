@@ -1,6 +1,6 @@
 package com.Leviata.Ecommerce.controllers;
 
-import Leviata.leviatan.dto.JogosRecordDto;
+import com.Leviata.Ecommerce.dto.JogosRecordDto;
 import Leviata.leviatan.model.JogosModel;
 import Leviata.leviatan.repositories.JogosRepository;
 import jakarta.validation.Valid;
