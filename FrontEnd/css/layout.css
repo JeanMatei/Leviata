@@ -3,3 +3,43 @@
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.cabecalho__container{
+  max-width:
+  1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.cabecalho_logo{
+  flex: 0 0 120px;
+}
+.cabecalho__nav{
+  flex: 1;
+  margin: 0 2rem;
+}
+.nav__lista{
+  display: flex;
+  gap: 2rem;
+}
+.nav__link{
+  font-weight: 500;
+  transition:color 0.3s;
+}
+.nav__link:houver
+.nav__ativo--ativo{
+  color: var(--cor-destaque);
+}
+.cabecalho__busca{
+  flex: 0 0 250px;
+}
+.busca__formulario{
+  display: flex;
+  background-color: rgba(255, 255, 255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.busca__input{
+  
+}

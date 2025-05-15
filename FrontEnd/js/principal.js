@@ -1,10 +1,11 @@
 // Carrega os componentes HTML
 document.addEventListener("DOMContentLoaded", () => {
   // Carrega os componentes
-  carregarComponente("cabecalho-container", "/html/cabecalho.html")
-  carregarComponente("banner-container", "/html/banner.html")
-  carregarComponente("ofertas-container", "/html/ofertas-relampago.html")
-  carregarComponente("todos-produtos-container", "/html/todos-produtos.html")
+ carregarComponente("cabecalho__container", "cabecalho.html")
+  carregarComponente("banner__container", "banner.html")
+  carregarComponente("ofertas__container", "ofertas-relampago.html")
+  carregarComponente("todos__produtos-container", "todos-produtos.html")
+
 
   // Inicializa as funcionalidades
   setTimeout(() => {
