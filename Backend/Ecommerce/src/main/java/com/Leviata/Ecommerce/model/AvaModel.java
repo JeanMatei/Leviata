@@ -1,4 +1,4 @@
-package Leviata.leviatan.model;
+package com.Leviata.Ecommerce.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
