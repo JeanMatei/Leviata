@@ -32,15 +32,13 @@
             document.getElementById("usuarioOuEmail").value;
           const senha = document.getElementById("senha").value;
 
-          // Simulação de verificação (substituir por back-end futuramente)
+          // Simulação de verificação
           if (
             (usuarioOuEmail === "teste@email.com" ||
               usuarioOuEmail === "usuario123") &&
             senha === "123456"
           ) {
             alert("Login realizado com sucesso!");
-            // Redirecionar se quiser:
-            // window.location.href = "pagina-principal.html";
           } else {
             alert("Usuário ou senha incorretos!");
           }
