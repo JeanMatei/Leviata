@@ -1,10 +1,9 @@
 package com.Leviata.Ecommerce.controllers;
+
 import Leviata.leviatan.dto.JogosRecordDto;
 import Leviata.leviatan.model.JogosModel;
 import Leviata.leviatan.repositories.JogosRepository;
 import jakarta.validation.Valid;
-import org.apache.coyote.Response;
-import org.aspectj.apache.bcel.util.Repository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
