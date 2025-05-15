@@ -1,6 +1,6 @@
 package Leviata.leviatan.repositories;
 
-import Leviata.leviatan.model.JogosModel;
+import com.Leviata.Ecommerce.model.JogosModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
