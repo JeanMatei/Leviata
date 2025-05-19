@@ -1,4 +1,9 @@
 package com.Leviata.Ecommerce.dto;
 
-public record AvaRecordDto() {
+
+public record AvaRecordDto(
+       int id,
+
+
+) {
 }
