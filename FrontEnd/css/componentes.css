@@ -44,7 +44,6 @@
   background-color: var(--cor-destaque);
 }
 
-/* Botão Ver Mais */
 .botao--ver-mais {
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
@@ -62,7 +61,6 @@
   background-color: var(--cor-destaque);
 }
 
-/* Animação de carregamento */
 .carregando {
   width: 24px;
   height: 24px;
@@ -87,7 +85,6 @@
   animation: surgir 0.5s ease-out forwards;
 }
 
-/* Cartão de produto */
 .produto {
   background-color: var(--cor-secundaria);
   border-radius: var(--borda-arredondada);
@@ -208,7 +205,6 @@
   align-items: center;
 }
 
-/* Filtros de produtos */
 .filtros {
   display: flex;
   gap: 1rem;
@@ -230,7 +226,6 @@
   background-color: var(--cor-destaque);
 }
 
-/* Ordenação */
 .ordenacao {
   display: flex;
   align-items: center;
@@ -257,7 +252,6 @@
   border-color: var(--cor-destaque);
 }
 
-/* Modal de produto */
 .modal {
   position: fixed;
   top: 0;

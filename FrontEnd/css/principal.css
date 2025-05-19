@@ -60,7 +60,6 @@
   border-radius: 4px;
 }
 
-/* Seção de ofertas */
 .ofertas {
   max-width: var(--largura-container);
   margin: 0 auto 3rem;
@@ -130,7 +129,6 @@
   }
 }
 
-/* Navegação de páginas */
 .paginacao {
   display: flex;
   justify-content: center;
