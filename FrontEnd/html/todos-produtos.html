@@ -1,20 +1,75 @@
-<section class="secao todos-produtos">
-    <div class="todos-produtos__container">
-        <div class="secao__cabecalho">
-            <div class="secao__titulo-container">
-                <div class="secao__icone">
+<div class="modal" id="modalProduto">
+        <div class="modal__conteudo">
+            <button class="modal__fechar" id="fecharModal" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="produto-detalhe">
+                <div class="produto-detalhe__imagem">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Nome do jogo" id="modalImagem">
                 </div>
-                <h2 class="secao__titulo">Todos os produtos</h2>
-            </div>
-            
-            <div class="navegacao">
-                <button class="navegacao__botao navegacao__anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="navegacao__botao navegacao__proximo">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="produto-detalhe__info">
+                    <div class="produto-detalhe__cabecalho">
+                        <div class="produto-detalhe__categoria" id="modalCategoria">RPG</div>
+                        <h2 class="produto-detalhe__titulo" id="modalTitulo">Nome do Jogo</h2>
+                        <div class="produto-detalhe__avaliacao">
+                            <div class="estrelas" id="modalEstrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="produto__reviews" id="modalReviews">(32)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="produto-detalhe__preco">
+                        <span class="produto-detalhe__preco-atual" id="modalPrecoAtual">R$ 89,90</span>
+                        <span class="produto-detalhe__preco-original" id="modalPrecoOriginal">R$ 129,90</span>
+                    </div>
+                    
+                    <div class="produto-detalhe__descricao">
+                        <p>Um jogo incrível com gráficos impressionantes e uma história envolvente. Explore um mundo aberto cheio de desafios, inimigos e tesouros escondidos.</p>
+                    </div>
+                    
+                    <div class="produto-detalhe__acoes">
+                        <div class="produto-detalhe__quantidade">
+                            <button class="diminuir-quantidade" aria-label="Diminuir quantidade">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="produto-detalhe__quantidade-valor">1</span>
+                            <button class="aumentar-quantidade" aria-label="Aumentar quantidade">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="botao botao--primario produto-detalhe__comprar">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                    
+                    <div class="produto-detalhe__caracteristicas">
+                        <h3 class="produto-detalhe__caracteristicas-titulo">Características</h3>
+                        <div class="produto-detalhe__caracteristicas-lista">
+                            <div class="caracteristica-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Mundo aberto</span>
+                            </div>
+                            <div class="caracteristica-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multijogador</span>
+                            </div>
+                            <div class="caracteristica-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Gráficos HD</span>
+                            </div>
+                            <div class="caracteristica-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Compatível com controle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
+    </div>
     
