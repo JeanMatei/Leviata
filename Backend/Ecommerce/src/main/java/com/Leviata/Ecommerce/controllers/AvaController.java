@@ -37,5 +37,12 @@ public class AvaController {
         return avaModel.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<AvaModel> updateAva(@PathVariable int id, @RequestBody AvaModel avaModel) {
+        if (!avaRepository.existsById(id)){
+            return ResponseEntity.notFound().build();
+        }
+        avaModel.setId(id);
+    }
 
 }
