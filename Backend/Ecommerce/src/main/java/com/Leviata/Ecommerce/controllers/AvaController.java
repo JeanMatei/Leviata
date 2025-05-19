@@ -43,6 +43,8 @@ public class AvaController {
             return ResponseEntity.notFound().build();
         }
         avaModel.setId(id);
+        AvaModel UpdatedAvaModel = avaRepository.save(avaModel);
+        return new ResponseEntity<>(UpdatedAvaModel, HttpStatus.OK);
     }
 
 }
