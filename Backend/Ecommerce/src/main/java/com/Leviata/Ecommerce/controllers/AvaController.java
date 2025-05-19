@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/avaliacoes")
@@ -25,11 +26,16 @@ public class AvaController {
         return new ResponseEntity<>(savedAvamodel, HttpStatus.CREATED);
     }
     @GetMapping
-    public ResponseEntity<List<AvaModel>> getAva(){
+    public ResponseEntity<List<AvaModel>> getAllAva(){
         List<AvaModel> avaliacaoList = avaRepository.findAll();
         return new ResponseEntity<>(avaliacaoList, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
+    public ResponseEntity<AvaModel> getAvaById(@PathVariable int id) {
+        Optional<AvaModel> avaModel = avaRepository.findById(id);
+        return avaModel.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
 
 }
