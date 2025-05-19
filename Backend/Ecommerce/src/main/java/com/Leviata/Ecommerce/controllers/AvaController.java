@@ -46,5 +46,13 @@ public class AvaController {
         AvaModel UpdatedAvaModel = avaRepository.save(avaModel);
         return new ResponseEntity<>(UpdatedAvaModel, HttpStatus.OK);
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<AvaModel> deleteAva(@PathVariable int id) {
+        if (!avaRepository.existsById(id)){
+            return ResponseEntity.notFound().build();
+        }
+        avaRepository.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }
