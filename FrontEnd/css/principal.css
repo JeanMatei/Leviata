@@ -1,0 +1,152 @@
+.banner {
+  background-color: var(--cor-primaria);
+  border-radius: var(--borda-arredondada);
+  margin: 2rem auto;
+  max-width: var(--largura-container);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--sombra-padrao);
+}
+
+.banner__container {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.banner__conteudo {
+  flex: 1;
+  padding-right: 2rem;
+  z-index: 2;
+}
+
+.banner__titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner__texto {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.banner__imagem {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__navegacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.banner__ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transicao-padrao);
+}
+
+.banner__ponto--ativo {
+  background-color: var(--cor-texto);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.ofertas {
+  max-width: var(--largura-container);
+  margin: 0 auto 3rem;
+  padding: 0 var(--espacamento-padrao);
+}
+
+.ofertas__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ofertas__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ofertas__contador {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contador__item {
+  background-color: var(--cor-secundaria);
+  border-radius: var(--borda-arredondada);
+  padding: 0.5rem;
+  min-width: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.ofertas__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .ofertas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ofertas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .banner__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .banner__conteudo {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.paginacao__botao {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria);
+  transition: var(--transicao-padrao);
+}
+
+.paginacao__botao:hover {
+  background-color: var(--cor-destaque);
+}

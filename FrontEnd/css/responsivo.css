@@ -1,0 +1,27 @@
+@media (max-width: 992px) {
+  .ofertas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ofertas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .banner__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .banner__conteudo {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas__grid {
+    grid-template-columns: 1fr;
+  }
+}
