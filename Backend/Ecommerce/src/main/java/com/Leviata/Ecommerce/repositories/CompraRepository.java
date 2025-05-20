@@ -1,4 +1,24 @@
 package com.Leviata.Ecommerce.repositories;
 
-public interface CompraRepository {
+import com.Leviata.Ecommerce.model.CompraModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface CompraRepository extends JpaRepository<CompraModel, Integer> {
+
+    List<CompraModel>findByCliente_id(int id);
+
+    List<CompraModel>findByJogo_id(int id);
+
+    List<CompraModel> findByForma_pagamento(CompraModel.FormaPagamento formaPagamento);
+
+    List<CompraModel>findByData_compraAfter(LocalDateTime dataCompra);
+
+
+    Optional<CompraModel> findById(int id);
 }
