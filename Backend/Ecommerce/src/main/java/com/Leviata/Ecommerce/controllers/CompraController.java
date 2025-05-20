@@ -20,9 +20,9 @@ public class CompraController {
     private CompraRepository compraRepository;
 
     @PostMapping
-    public ResponseEntity<CompraRecordDto>createCompra(@RequestBody CompraModel compraModel) {
+    public ResponseEntity<CompraRecordDto> createCompra(@RequestBody CompraModel compraModel) {
         CompraModel savedCompra = compraRepository.save(compraModel);
-        CompraRecordDto compraRecordDto =  CompraRecordDto.fromModel(savedCompra);
+        CompraRecordDto compraRecordDto = CompraRecordDto.fromModel(savedCompra);
         return new ResponseEntity<>(compraRecordDto, HttpStatus.CREATED);
 
     }

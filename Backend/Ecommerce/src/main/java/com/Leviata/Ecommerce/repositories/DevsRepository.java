@@ -3,10 +3,12 @@ package com.Leviata.Ecommerce.repositories;
 import com.Leviata.Ecommerce.model.DevsModel;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 
 import java.util.Optional;
 
+@Repository
 public interface DevsRepository extends JpaRepository<DevsModel, Integer> {
 
     Optional<DevsModel> findById(int id);

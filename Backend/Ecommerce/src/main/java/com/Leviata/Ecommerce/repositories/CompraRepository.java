@@ -11,13 +11,13 @@ import java.util.Optional;
 @Repository
 public interface CompraRepository extends JpaRepository<CompraModel, Integer> {
 
-    List<CompraModel>findByCliente_id(int id);
+    Optional<CompraModel>findByCliente_id(int id);
 
-    List<CompraModel>findByJogo_id(int id);
+    Optional<CompraModel>findByJogo_id(int id);
 
-    List<CompraModel> findByForma_pagamento(CompraModel.FormaPagamento formaPagamento);
+    Optional<CompraModel> findByForma_pagamento(CompraModel.FormaPagamento formaPagamento);
 
-    List<CompraModel>findByData_compraAfter(LocalDateTime dataCompra);
+    Optional<CompraModel>findByData_compraAfter(LocalDateTime dataCompra);
 
 
     Optional<CompraModel> findById(int id);

@@ -21,12 +21,13 @@ public class AvaController {
     private AvaRepository avaRepository;
 
     @PostMapping
-    public ResponseEntity<AvaModel>createAva(@RequestBody AvaModel avaModel){
+    public ResponseEntity<AvaModel> createAva(@RequestBody AvaModel avaModel) {
         AvaModel savedAvamodel = avaRepository.save(avaModel);
         return new ResponseEntity<>(savedAvamodel, HttpStatus.CREATED);
     }
+
     @GetMapping
-    public ResponseEntity<List<AvaModel>> getAllAva(){
+    public ResponseEntity<List<AvaModel>> getAllAva() {
         List<AvaModel> avaliacaoList = avaRepository.findAll();
         return new ResponseEntity<>(avaliacaoList, HttpStatus.OK);
     }
@@ -39,7 +40,7 @@ public class AvaController {
 
     @PutMapping("/{id}")
     public ResponseEntity<AvaModel> updateAva(@PathVariable int id, @RequestBody AvaModel avaModel) {
-        if (!avaRepository.existsById(id)){
+        if (!avaRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
         avaModel.setId(id);

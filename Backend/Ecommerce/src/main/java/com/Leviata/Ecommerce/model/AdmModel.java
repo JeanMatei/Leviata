@@ -19,6 +19,7 @@ public class AdmModel {
     @Column(name = "email", length = 100)
     private String email;
 
+    @NotBlank
     @Column(name = "senha", length = 255)
     private String senha;
 
