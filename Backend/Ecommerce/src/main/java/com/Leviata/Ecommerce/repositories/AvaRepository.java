@@ -21,6 +21,8 @@ public interface AvaRepository extends JpaRepository<AvaModel,Integer> {
 
     Optional<AvaModel> findByDataAvaliacaoAfter(LocalDateTime data);
 
+    Optional<AvaModel> findByEmail(String email);
+
 
     Optional<AvaModel> findById(int id);
 }
