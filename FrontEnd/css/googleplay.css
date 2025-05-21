@@ -1,0 +1,163 @@
+.install-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.installing {
+    background-color: #9e9e9e;
+    cursor: default;
+}
+
+
+.installed {
+    background-color: #1976d2;
+}
+
+
+.checkmark {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+
+.googleplay1-icon {
+    background-image: url('/imagem/icongoogleplay1.jpg');
+}
+
+
+.googleplay2-icon {
+    background-image: url('/imagem/icongoogleplay2.jpg');
+}
+.googleplay3-icon {
+    background-image: url('/imagem/icongoogleplay3.jpg');
+}
+
+.app-stats {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+}
+
+.verified-icon {
+    width: 34px;
+    height: 34px;
+    margin-top: 6px;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .app-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .app-stats {
+    justify-content: center;
+    gap: 20px;
+}
+
+
+    .app-icon {
+        width: 80px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .install-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .screenshots-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .screenshots-list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .reviews-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .similar-apps-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .similar-app-item {
+        width: 100px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-details h1 {
+        font-size: 1.4rem;
+    }
+
+    .install-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
