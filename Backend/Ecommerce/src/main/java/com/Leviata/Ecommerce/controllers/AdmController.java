@@ -22,7 +22,7 @@ public class AdmController {
     private AdmRepository admRepository;
 
     @GetMapping
-    public ResponseEntity<AdmModel> saveAdm(@RequestBody @Valid AdmRecordDto admRecordDto) {
+    public ResponseEntity<AdmModel> createAdm(@RequestBody @Valid AdmRecordDto admRecordDto) {
 
         AdmModel admModel = new AdmModel();
 
@@ -99,6 +99,8 @@ public class AdmController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        var admModel1 = admExist.get();
+        BeanUtils.copyProperties(admRecordDto, admModel);
         return ResponseEntity.status(HttpStatus.OK).body(admModel);
     }
 }

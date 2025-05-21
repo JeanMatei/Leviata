@@ -95,5 +95,6 @@ public class JogosController {
         } catch (BeansException e) {
             throw new RuntimeException("Erro ao atualizar jogo", e);
         }
+
     }
 }

@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tbDevs")
-public class DevsModel {
+public class DevModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

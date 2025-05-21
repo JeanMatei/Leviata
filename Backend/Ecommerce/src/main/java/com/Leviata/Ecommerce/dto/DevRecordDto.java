@@ -2,7 +2,7 @@ package com.Leviata.Ecommerce.dto;
 
 import jakarta.validation.constraints.Pattern;
 
-public record DevsRecordDto(
+public record DevRecordDto(
         String nm_empresa,
         String nm_Responsavel,
         String email,
