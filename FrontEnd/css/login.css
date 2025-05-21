@@ -180,7 +180,7 @@ button:hover {
 .app-images {
     display: flex;
     gap: 10px;
-    background-image: url(../imagem/qrcode.jpg);
+    background-image: url(../img/qrcode.jpg);
     width: 80px;
     height: 80px;
     background-size: contain;
@@ -206,7 +206,7 @@ button:hover {
 }
 
 .googleplay-btn {
-    background-image: url(../imagem/googleplaylogo.png);
+    background-image: url(../img/googleplaylogo.png);
     background-size: cover;
     border: 1px solid white;
     position: relative;
@@ -214,7 +214,7 @@ button:hover {
 }
 
 .appstore-btn {
-    background-image: url(../imagem/applestorelogo.jpg);
+    background-image: url(../img/applestorelogo.jpg);
     background-size: cover;
     border: 1px solid white;
      position: relative;
@@ -305,7 +305,7 @@ button:hover {
     padding: 0 10px;
     cursor: pointer;
     width: 50px;
-    background-image: url(../imagem/seta.png);
+    background-image: url(../img/seta.png);
     background-size: cover;
 }
 
@@ -351,7 +351,7 @@ button:hover {
 @media screen and (max-width: 768px) {
     body {
         background-size: 200px;
-        background-position: center 250px; /* IMAGEM ABAIXO DOS LINKS */
+        background-position: center 250px; 
     }
 
     #logo-container {

@@ -42,15 +42,15 @@
 
 
 .googleplay1-icon {
-    background-image: url('/imagem/icongoogleplay1.jpg');
+    background-image: url(../img/icongoogleplay1.jpg);
 }
 
 
 .googleplay2-icon {
-    background-image: url('/imagem/icongoogleplay2.jpg');
+    background-image: url(../imagem/icongoogleplay2.jpg);
 }
 .googleplay3-icon {
-    background-image: url('/imagem/icongoogleplay3.jpg');
+    background-image: url(../imagem/icongoogleplay3.jpg);
 }
 
 .app-stats {

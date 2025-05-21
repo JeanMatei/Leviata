@@ -2,7 +2,7 @@
 @media screen and (min-width: 1025px) {
     body {
         background-color: #000;
-        background-image: url(../imagem/login.png);
+        background-image: url(../img/login.png);
         background-repeat: no-repeat;
         background-position: 100px 150px;
         background-size: 500px;
@@ -21,7 +21,7 @@
         position: relative;
         margin-top: 30px;
         margin-left: 400px;
-        background-image: url(../imagem/logo.png);
+        background-image: url(../img/logo.png);
         background-repeat: no-repeat;
         background-size: contain;
         padding-left: 80px;
@@ -206,7 +206,7 @@
     }
 
     .app-images {
-        background-image: url(../imagem/qrcode.jpg);
+        background-image: url(../img/qrcode.jpg);
         width: 80px;
         height: 80px;
         background-size: contain;
@@ -234,7 +234,7 @@
     }
 
     .googleplay-btn {
-        background-image: url(../imagem/googleplaylogo.png);
+        background-image: url(../img/googleplaylogo.png);
         background-size: cover;
         border: 1px solid white;
         right: 80px;
@@ -242,7 +242,7 @@
     }
 
     .appstore-btn {
-        background-image: url(../imagem/applestorelogo.jpg);
+        background-image: url(../img/applestorelogo.jpg);
         background-size: cover;
         border: 1px solid white;
         position: relative;
@@ -304,7 +304,7 @@
         padding: 0 10px;
         cursor: pointer;
         width: 50px;
-        background-image: url(../imagem/seta.png);
+        background-image: url(../img/seta.png);
         background-size: cover;
     }
 }
@@ -324,7 +324,7 @@
         max-width: 60px;
         height: 60px;
         margin: 20px auto;
-        background-image: url(../imagem/logo.png);
+        background-image: url(../img/logo.png);
         background-repeat: no-repeat;
         background-size: contain;
         color: #788199;
