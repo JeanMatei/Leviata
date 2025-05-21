@@ -13,6 +13,6 @@ public record CompraRecordDto(
         LocalDateTime dataCompra,
         BigDecimal precoPago,
         FormaPagamento formaPagamento
-)
+){
 }
 
