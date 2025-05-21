@@ -5,17 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="header">
-    <div class="logo">Leviatã</div>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Suporte</a>
-      <a href="#">Sobre nós</a>
-    </nav>
-    <input type="text" class="search" placeholder="O que você procura?" />
-  </header>
+ <header class="cabecalho">
+        <div class="cabecalho__container">
+            <button class="menu-mobile" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+            </a>
+            
+            <nav class="cabecalho__nav">
+                <ul class="nav__lista">
+                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+                    <li><a href="#" class="nav__link">Suporte</a></li>
+                    <li><a href="#" class="nav__link">Sobre nós</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cabecalho__busca">
+                <form class="busca__formulario">
+                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
+                    <button type="submit" class="busca__botao" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cabecalho__acoes">
+                <a href="#" class="icone-favoritos" aria-label="Favoritos">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="icone-usuario" aria-label="Minha conta">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
 
   <main class="container">
     <h2 class="cart-title">Carrinho</h2>
