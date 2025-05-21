@@ -1,6 +1,5 @@
 package com.Leviata.Ecommerce.controllers;
 
-
 import com.Leviata.Ecommerce.model.AvaModel;
 import com.Leviata.Ecommerce.repositories.AvaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/avaliacoes")
-
-
 public class AvaController {
 
     @Autowired
@@ -22,8 +19,8 @@ public class AvaController {
 
     @PostMapping
     public ResponseEntity<AvaModel> createAva(@RequestBody AvaModel avaModel) {
-        AvaModel savedAvamodel = avaRepository.save(avaModel);
-        return new ResponseEntity<>(savedAvamodel, HttpStatus.CREATED);
+        AvaModel savedAvaModel = avaRepository.save(avaModel);
+        return new ResponseEntity<>(savedAvaModel, HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -35,7 +32,8 @@ public class AvaController {
     @GetMapping("/{id}")
     public ResponseEntity<AvaModel> getAvaById(@PathVariable int id) {
         Optional<AvaModel> avaModel = avaRepository.findById(id);
-        return avaModel.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return avaModel.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
@@ -44,16 +42,7 @@ public class AvaController {
             return ResponseEntity.notFound().build();
         }
         avaModel.setId(id);
-        AvaModel UpdatedAvaModel = avaRepository.save(avaModel);
-        return new ResponseEntity<>(UpdatedAvaModel, HttpStatus.OK);
+        AvaModel updatedAvaModel = avaRepository.save(avaModel);
+        return new ResponseEntity<>(updatedAvaModel, HttpStatus.OK);
     }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<AvaModel> deleteAva(@PathVariable int id) {
-        if (!avaRepository.existsById(id)){
-            return ResponseEntity.notFound().build();
-        }
-        avaRepository.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-
 }

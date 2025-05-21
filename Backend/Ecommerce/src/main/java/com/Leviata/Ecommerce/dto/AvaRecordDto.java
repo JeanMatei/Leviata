@@ -11,4 +11,6 @@ public record AvaRecordDto(
        String comentario,
        LocalDateTime dtAvaliacao
 ) {
+
+
 }
