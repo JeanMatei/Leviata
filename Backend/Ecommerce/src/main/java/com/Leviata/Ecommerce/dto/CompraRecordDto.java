@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
 
 public record CompraRecordDto(
         int id,
-        int clienteId,
-        int jogoId,
+        int cliente_Id,
+        int jogo_Id,
         LocalDateTime dataCompra,
         FormaPagamento formaPagamento
 ){

@@ -14,5 +14,6 @@ public interface ClienteRepository extends JpaRepository<ClienteModel, Integer> 
 
     Optional<ClienteModel> findByTelefone(String telefone);
 
+    Optional<ClienteModel> findAllByClienteId(int clienteId);
 
-}
+    }
