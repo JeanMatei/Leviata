@@ -17,7 +17,7 @@ public interface CompraRepository extends JpaRepository<CompraModel, Integer> {
 
     Optional<CompraModel> findByForma_pagamento(CompraModel.FormaPagamento formaPagamento);
 
-    Optional<CompraModel>findByData_compraAfter(LocalDateTime dataCompra);
+    Optional<LocalDateTime> dataCompra();
 
 
     Optional<CompraModel> findById(int id);

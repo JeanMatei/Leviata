@@ -20,7 +20,6 @@ public class CompraModel {
 
     private BigDecimal preco_pago;
 
-    @Enumerated(EnumType.STRING)
     private FormaPagamento forma_pagamento;
 
 
@@ -29,7 +28,7 @@ public class CompraModel {
         EPIX
     }
 
- 
+
 
     public int getId() {
         return id;

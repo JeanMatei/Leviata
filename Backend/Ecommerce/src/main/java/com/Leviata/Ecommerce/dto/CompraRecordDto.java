@@ -11,7 +11,6 @@ public record CompraRecordDto(
         int clienteId,
         int jogoId,
         LocalDateTime dataCompra,
-        BigDecimal precoPago,
         FormaPagamento formaPagamento
 ){
 }

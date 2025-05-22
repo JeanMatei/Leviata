@@ -1,8 +1,6 @@
 package com.Leviata.Ecommerce.controllers;
 
-import com.Leviata.Ecommerce.dto.AdmRecordDto;
 import com.Leviata.Ecommerce.dto.AvaRecordDto;
-import com.Leviata.Ecommerce.model.AdmModel;
 import com.Leviata.Ecommerce.model.AvaModel;
 import com.Leviata.Ecommerce.repositories.AvaRepository;
 import jakarta.validation.Valid;
@@ -24,87 +22,58 @@ public class AvaController {
     private AvaRepository avaRepository;
 
     @PostMapping
-    public ResponseEntity<AvaModel> createAva(@RequestBody AvaRecordDto avaRecordDto) {
-        AvaModel avaModel = new AvaModel();
-
+    public ResponseEntity<?> createAva(@RequestBody @Valid AvaRecordDto avaRecordDto) {
         try {
+            AvaModel avaModel = new AvaModel();
             BeanUtils.copyProperties(avaRecordDto, avaModel);
+            AvaModel saved = avaRepository.save(avaModel);
+            return ResponseEntity.status(HttpStatus.CREATED).body(saved);
         } catch (BeansException e) {
-            throw new RuntimeException(e);
-        }
-
-        Optional<AvaModel> avaExist = avaRepository.findById(avaModel.getId());
-
-        try {
-            if (avaExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(avaModel);
-            }
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao copiar propriedades: " + e.getMessage());
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar avaliação: " + e.getMessage());
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body(avaModel);
-
-    }
-    @GetMapping
-    public ResponseEntity<List<AvaModel>> getAllAva() {
-
-        return ResponseEntity.status(HttpStatus.OK).body(avaRepository.findAll());
-    }
-
-    @GetMapping("/id")
-    public ResponseEntity<AvaModel> getAvaById(@RequestParam int id) {
-        Optional<AvaModel> avaExist = avaRepository.findById(id);
-
-        try {
-            if (avaExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(avaExist.get());
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(avaExist.get());
     }
 
     @GetMapping
-    public ResponseEntity<AvaModel> getAvaByemail(@RequestParam String email) {
-
-        Optional<AvaModel> avaExist = avaRepository.findByEmail(email);
-
+    public ResponseEntity<?> getAllAva() {
         try {
-            if (avaExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(avaExist.get());
-            }
-        } catch (RuntimeException e) {
-            throw new RuntimeException(e);
+            List<AvaModel> list = avaRepository.findAll();
+            return ResponseEntity.ok(list);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao listar avaliações: " + e.getMessage());
         }
-
-        return ResponseEntity.status(HttpStatus.OK).body(avaExist.get());
     }
 
-    @GetMapping("/id")
-    public ResponseEntity<AvaModel> updateAva(@PathVariable(value = "id") int id,
-                                              @RequestBody @Valid AvaRecordDto avaRecordDto) {
-        AvaModel avaModel = new AvaModel();
-        Optional<AvaModel> avaExist = avaRepository.findById(avaModel.getId());
-
-        if (avaExist.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(avaModel);
-        }
-
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getAvaById(@PathVariable int id) {
         try {
+            Optional<AvaModel> avaExist = avaRepository.findById(id);
             if (avaExist.isPresent()) {
-                BeanUtils.copyProperties(avaRecordDto, avaModel);
-                avaModel.setId(avaExist.get().getId());
-                return ResponseEntity.status(HttpStatus.OK).body(avaModel);
+                return ResponseEntity.ok(avaExist.get());
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Avaliação não encontrada.");
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao buscar avaliação: " + e.getMessage());
         }
-        var admModel = avaExist.get();
-        BeanUtils.copyProperties(avaRecordDto, avaModel);
-        return ResponseEntity.status(HttpStatus.OK).body(avaModel);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateAva(@PathVariable int id, @RequestBody @Valid AvaRecordDto avaRecordDto) {
+        try {
+            Optional<AvaModel> avaExist = avaRepository.findById(id);
+            if (avaExist.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Avaliação não encontrada.");
+            }
+            AvaModel avaModel = avaExist.get();
+            BeanUtils.copyProperties(avaRecordDto, avaModel);
+            AvaModel updated = avaRepository.save(avaModel);
+            return ResponseEntity.ok(updated);
+        } catch (BeansException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao copiar propriedades: " + e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao atualizar avaliação: " + e.getMessage());
+        }
     }
 }
-
-
-

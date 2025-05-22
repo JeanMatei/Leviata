@@ -14,7 +14,6 @@ public class AvaModel {
     private int id;
 
     @NotNull
-    @Column(name = "compra_id")
     private int compraId;
 
     @NotNull
@@ -22,10 +21,8 @@ public class AvaModel {
 
     private String comentario;
 
-    @Column(name = "data_avaliacao")
     private LocalDateTime dataAvaliacao;
 
-    // Getters e Setters
     public int getId() {
         return id;
     }

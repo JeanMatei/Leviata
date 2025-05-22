@@ -9,21 +9,19 @@ public class AdmModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+
+    @NotBlank
     private int id;
 
     @NotBlank
-    @Column(name = "nome", length = 100)
     private String nome;
 
-    @Column(name = "email", length = 100)
+
     private String email;
 
     @NotBlank
-    @Column(name = "senha", length = 255)
     private String senha;
 
-    // Getters e Setters
 
     public int getId() {
         return id;
