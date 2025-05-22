@@ -1,7 +1,7 @@
 // Carrega os componentes HTML
 document.addEventListener("DOMContentLoaded", () => {
   // Carrega os componentes
- carregarComponente("cabecalho__container", "cabecalho.html")
+  carregarComponente("cabecalho__container", "cabecalho.html")
   carregarComponente("banner__container", "banner.html")
   carregarComponente("ofertas__container", "ofertas-relampago.html")
   carregarComponente("todos__produtos-container", "todos-produtos.html")
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inicializarSlider()
     inicializarBotoesProduto()
     inicializarNavegacao()
+    inicializarBotaoVerMais() // Nova função adicionada
   }, 500)
 })
 
@@ -36,6 +37,7 @@ function inicializarNavegacao() {
   // Lógica para inicializar a navegação
   console.log("Navegação inicializada")
 }
+
 
 // Função para carregar componentes HTML
 function carregarComponente(containerId, url) {

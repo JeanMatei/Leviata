@@ -44,21 +44,28 @@
   background-color: var(--cor-destaque);
 }
 
+.ver-mais {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 2rem 0;
+}
+
 .botao--ver-mais {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
   padding: 0.75rem 2rem;
-  margin: 2rem auto 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  width: fit-content;
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.botao--ver-mais:hover {
-  background-color: var(--cor-destaque);
+  border-radius: var(--borda-arredondada);
+  font-weight: 600;
+  transition: var(--transicao-padrao);
 }
 
 .carregando {

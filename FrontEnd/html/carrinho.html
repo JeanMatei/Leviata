@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="styles.css">
  <header class="cabecalho">
         <div class="cabecalho__container">
             <button class="menu-mobile" aria-label="Abrir menu">
@@ -38,3 +45,39 @@
             </div>
         </div>
     </header>
+
+  <main class="container">
+    <h2 class="cart-title">Carrinho</h2>
+
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linhas de produtos serão inseridas aqui dinamicamente -->
+      </tbody>
+    </table>
+
+    <button class="back-button">Voltar à loja</button>
+
+    <div class="coupon-summary">
+      <div class="coupon">
+        <input type="text" placeholder="Código do cupom" />
+        <button>Aplicar cupom</button>
+      </div>
+
+      <div class="summary">
+        <h3>Valores</h3>
+        <p>Subtotal: R$0</p>
+        <p>Desconto: R$0</p>
+        <p><strong>Total: R$0</strong></p>
+        <button class="continue-button">Continuar</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -81,20 +81,6 @@
   gap: 0.5rem;
 }
 
-.ofertas__contador {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.contador__item {
-  background-color: var(--cor-secundaria);
-  border-radius: var(--borda-arredondada);
-  padding: 0.5rem;
-  min-width: 2.5rem;
-  text-align: center;
-  font-weight: 700;
-}
-
 .ofertas__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

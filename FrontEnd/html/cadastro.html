@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leviatã - E-commerce de Jogos Indie</title>
-   <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 </head>
@@ -25,13 +25,18 @@
     
 
     <div id="cadastro-container">
-        <h1>Entre com sua conta</h1>
+        <h1>Criar uma conta</h1>
         <h3>Inserir seus dados abaixo!</h3>
 
         <form>
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
             <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar </button> <a href="login.html" class="forgot-password">Esqueceu sua senha?</a></h3>
+            <button type="submit">Criar Conta</button>
+
+    <div class="login-info">
+    <h3>Já possui uma conta? <a href="login.html" class="login-link">Log in</a></h3>
+  </div>
         </form>
 
     </div>
@@ -94,7 +99,7 @@
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="copyright">
                 <p>Copyright © 2025 E-Commerce App. All rights reserved</p>
