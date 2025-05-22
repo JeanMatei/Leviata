@@ -16,8 +16,6 @@ public interface JogosRepository extends JpaRepository<JogosModel, Integer> {
 
     Optional<JogosModel> findByPreco(double preco);
 
-    Optional<JogosModel> findByAprovacao(String aprovacao);
-
-    List<JogosModel> findAllJogos();
+    Optional<JogosModel> findAllByIdjogo(int idjogo);
 
 }

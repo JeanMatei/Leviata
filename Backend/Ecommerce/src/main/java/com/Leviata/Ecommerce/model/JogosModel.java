@@ -5,11 +5,12 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tbJogos")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class JogosModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idJogos;
+    private int idjogo;
 
     @NotBlank
     private String titulo;
@@ -29,12 +30,15 @@ public class JogosModel {
 
     private String arquivo;
 
-    public int getIdJogos() {
-        return idJogos;
+    public JogosModel() {
     }
 
-    public void setIdJogos(int idJogos) {
-        this.idJogos = idJogos;
+    public int getIdjogo() {
+        return idjogo;
+    }
+
+    public void setIdjogo(int idjogo) {
+        this.idjogo = idjogo;
     }
 
     public String getTitulo() {

@@ -51,16 +51,20 @@ public class JogosController {
 
 
     @GetMapping
-    public ResponseEntity<List<JogosModel>> getAllJogos() {
+    public ResponseEntity<Iterable<JogosModel>> getAllJogos() {
         return ResponseEntity.status(HttpStatus.OK).body(jogosRepository.findAll());
     }
 
 
-    @GetMapping("/{id}")
-    public ResponseEntity<JogosModel> getOneJogo(@PathVariable(value = "id") int id) {
-        Optional<JogosModel> jogo = jogosRepository.findById(id);
-        return jogo.map(j -> ResponseEntity.status(HttpStatus.OK).body(j))
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+    @GetMapping("/{idjogo}")
+    public ResponseEntity<JogosModel> getOneJogo(@PathVariable(value = "idjogo") int idjogo) {
+        Optional<JogosModel> jog = jogosRepository.findAllByIdjogo(idjogo);
+
+        if (jog.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(jog.get());
+
     }
 
     @GetMapping("/titulo/{titulo}")

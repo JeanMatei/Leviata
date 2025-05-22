@@ -23,6 +23,9 @@ public class AvaModel {
 
     private LocalDateTime dataAvaliacao;
 
+    public AvaModel() {
+    }
+
     public int getId() {
         return id;
     }

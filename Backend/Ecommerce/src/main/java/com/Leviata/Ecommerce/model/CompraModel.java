@@ -1,80 +1,66 @@
 package com.Leviata.Ecommerce.model;
 import jakarta.persistence.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tbCompra")
-public class CompraModel {
+public class CompraModel extends JogosModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idCompra;
 
-    private int cliente_id;
+    private int clienteId;
 
-    private int jogo_id;
+    private int jogosId;
 
-    private LocalDateTime data_compra;
+    private LocalDateTime dt_Compra;
 
-    private BigDecimal preco_pago;
+    private Double vl_Compra;
 
-    private FormaPagamento forma_pagamento;
-
+    public CompraModel() {
+    }
 
     public enum FormaPagamento {
         CARTAO,
         EPIX
     }
-
-
-
-    public int getId() {
-        return id;
+    public int getIdCompra() {
+        return idCompra;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdCompra(int idCompra) {
+        this.idCompra = idCompra;
     }
 
-    public int getCliente_id() {
-        return cliente_id;
+    public int getClienteId() {
+        return clienteId;
     }
 
-    public void setCliente_id(int cliente_id) {
-        this.cliente_id = cliente_id;
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
     }
 
-    public int getJogo_id() {
-        return jogo_id;
+    public int getJogosId() {
+        return jogosId;
     }
 
-    public void setJogo_id(int jogo_id) {
-        this.jogo_id = jogo_id;
+    public void setJogosId(int jogosId) {
+        this.jogosId = jogosId;
     }
 
-    public LocalDateTime getData_compra() {
-        return data_compra;
+    public LocalDateTime getDt_Compra() {
+        return dt_Compra;
     }
 
-    public void setData_compra(LocalDateTime data_compra) {
-        this.data_compra = data_compra;
+    public void setDt_Compra(LocalDateTime dt_Compra) {
+        this.dt_Compra = dt_Compra;
     }
 
-    public BigDecimal getPreco_pago() {
-        return preco_pago;
+    public Double getVl_Compra() {
+        return vl_Compra;
     }
 
-    public void setPreco_pago(BigDecimal preco_pago) {
-        this.preco_pago = preco_pago;
-    }
-
-    public FormaPagamento getForma_pagamento() {
-        return forma_pagamento;
-    }
-
-    public void setForma_pagamento(FormaPagamento forma_pagamento) {
-        this.forma_pagamento = forma_pagamento;
+    public void setVl_Compra(Double vl_Compra) {
+        this.vl_Compra = vl_Compra;
     }
 }

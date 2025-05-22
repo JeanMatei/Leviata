@@ -21,7 +21,7 @@ public class AdmController {
     @Autowired
     private AdmRepository admRepository;
 
-    @GetMapping
+    @PostMapping
     public ResponseEntity<AdmModel> createAdm(@RequestBody @Valid AdmRecordDto admRecordDto) {
 
         AdmModel admModel = new AdmModel();
@@ -32,7 +32,7 @@ public class AdmController {
             throw new RuntimeException(e);
         }
 
-        Optional<AdmModel> admExist = admRepository.findById(admModel.getId());
+        Optional<AdmModel> admExist = admRepository.findById(admModel.getIdadm());
 
         try {
             if (admExist.isPresent()) {
@@ -45,14 +45,14 @@ public class AdmController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AdmModel>> getAllAdm() {
+    public ResponseEntity<Iterable<AdmModel>> getAllAdm() {
 
         return ResponseEntity.status(HttpStatus.OK).body(admRepository.findAll());
     }
 
-    @GetMapping("/id")
-    public ResponseEntity<AdmModel> getAdmById(@RequestParam int id) {
-        Optional<AdmModel> admExist = admRepository.findById(id);
+    @GetMapping("/idadm")
+    public ResponseEntity<AdmModel> getAdmById(@RequestParam int idadm) {
+        Optional<AdmModel> admExist = admRepository.findAllByidadm(idadm);
 
         try {
             if (admExist.isPresent()) {
@@ -64,7 +64,7 @@ public class AdmController {
         return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
     }
 
-    @GetMapping
+    @GetMapping("/email")
     public ResponseEntity<AdmModel> getAdmByemail(@RequestParam String email) {
 
         Optional<AdmModel> admExist = admRepository.findByEmail(email);
@@ -81,10 +81,10 @@ public class AdmController {
     }
 
     @GetMapping("/id")
-    public ResponseEntity<AdmModel> updateAdm(@PathVariable(value = "id") int id,
+    public ResponseEntity<AdmModel> updateAdm(@PathVariable(value = "idadm") int id,
                                               @RequestBody @Valid AdmRecordDto admRecordDto) {
         AdmModel admModel = new AdmModel();
-        Optional<AdmModel> admExist = admRepository.findById(admModel.getId());
+        Optional<AdmModel> admExist = admRepository.findById(admModel.getIdadm());
 
         if (admExist.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(admModel);
@@ -93,7 +93,7 @@ public class AdmController {
         try {
             if (admExist.isPresent()) {
                 BeanUtils.copyProperties(admRecordDto, admModel);
-                admModel.setId(admExist.get().getId());
+                admModel.setIdadm(admExist.get().getIdadm());
                 return ResponseEntity.status(HttpStatus.OK).body(admModel);
             }
         } catch (Exception e) {

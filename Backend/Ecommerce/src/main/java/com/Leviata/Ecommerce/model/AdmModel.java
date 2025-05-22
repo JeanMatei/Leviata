@@ -11,7 +11,7 @@ public class AdmModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @NotBlank
-    private int id;
+    private int idadm;
 
     @NotBlank
     private String nome;
@@ -22,13 +22,15 @@ public class AdmModel {
     @NotBlank
     private String senha;
 
-
-    public int getId() {
-        return id;
+    public AdmModel() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getIdadm() {
+        return idadm;
+    }
+
+    public void setIdadm(int idadm) {
+        this.idadm = idadm;
     }
 
     public String getNome() {

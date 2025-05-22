@@ -1,44 +1,39 @@
 package com.Leviata.Ecommerce.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "tbCliente")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class ClienteModel {
 
     @Id
-    private int id;
+    private int clienteId;
 
     @NotBlank
-    @Size(max = 100)
     private String nome;
 
     @NotBlank
-    @Email
-    @Size(max = 100)
     private String email;
 
     @NotBlank
-    @Size(max = 255)
     private String senha;
 
     @NotBlank
-    @Size(max = 20)
     private String telefone;
 
-    // Getters e setters
-
-    public int getId() {
-        return id;
+    public ClienteModel() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+// Getters e setters
+
+    public int getClienteId() {
+        return clienteId;
+    }
+
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
     }
 
     public String getNome() {
