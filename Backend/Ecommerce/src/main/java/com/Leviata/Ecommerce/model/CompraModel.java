@@ -1,5 +1,6 @@
 package com.Leviata.Ecommerce.model;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDateTime;
 
@@ -7,14 +8,20 @@ import java.time.LocalDateTime;
 @Table(name = "tbCompra")
 public class CompraModel extends JogosModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCompra;
 
+    @NotBlank
     private int clienteId;
 
+    @NotBlank
     private int jogosId;
 
+    @NotBlank
     private LocalDateTime dt_Compra;
 
+    @NotBlank
     private Double vl_Compra;
 
     public CompraModel() {

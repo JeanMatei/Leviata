@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 public class ClienteModel {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int clienteId;
 
     @NotBlank
