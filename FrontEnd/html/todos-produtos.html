@@ -1,93 +1,138 @@
-<header class="cabecalho">
-		<div class="cabecalho__container">
-			<button class="menu-mobile" aria-label="Abrir menu">
-				<i class="fas fa-bars"></i>
-			</button>
-			
-			<a href="/" class="cabecalho__logo">
-				<img src="/FrontEnd/img/logo.png" alt="Leviatã">
-			</a>
-			
-			<nav class="cabecalho__nav">
-				<ul class="nav__lista">
-					<li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
-					<li><a href="#" class="nav__link">Suporte</a></li>
-					<li><a href="#" class="nav__link">Faça Parte </a></li>
-					<li><a href="#" class="nav__link">Sobre nós</a></li>
-				</ul>
-			</nav>
-			
-			<div class="cabecalho__busca">
-				<form class="busca__formulario">
-					<input type="text" class="busca__input" placeholder="Buscar produtos...">
-					<button type="submit" class="busca__botao" aria-label="Buscar">
-						<i class="fas fa-search"></i>
-					</button>
-				</form>
-			</div>
-			
-			<div class="cabecalho__acoes">
-				<a href="#" class="icone-favoritos" aria-label="Favoritos">
-					<i class="far fa-heart"></i>
-				</a>
-				<a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
-					<i class="fas fa-shopping-cart"></i>
-				</a>
-				<a href="#" class="icone-usuario" aria-label="Minha conta">
-					<i class="far fa-user"></i>
-				</a>
-			</div>
-		</div>
-	</header>
-<div class="modal" id="modalProduto">
-	<div class="modal__conteudo">
-		<button class="modal__fechar" id="fecharModal" aria-label="Fechar modal">
-			<i class="fas fa-times"></i>
-		</button>
-		<div class="produto-detalhe">
-			<div class="produto-detalhe__imagem">
-				<img src="/placeholder.svg?height=300&width=300" alt="Nome do jogo" id="modalImagem">
-			</div>
-			<div class="produto-detalhe__info">
-				<div class="produto-detalhe__cabecalho">
-					<div class="produto-detalhe__categoria" id="modalCategoria">RPG</div>
-					<h2 class="produto-detalhe__titulo" id="modalTitulo">Nome do Jogo</h2>
-					<div class="produto-detalhe__avaliacao">
-						<div class="estrelas" id="modalEstrelas">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star-half-alt"></i>
-						</div>
-						<span class="produto__reviews" id="modalReviews">(32)</span>
-					</div>
-				</div>
-				
-				<div class="produto-detalhe__preco">
-					<span class="produto-detalhe__preco-atual" id="modalPrecoAtual">/</span>
-					<span class="produto-detalhe__preco-original" id="modalPrecoOriginal">/</span>
-				</div>
-				
-				<div class="produto-detalhe__descricao">
-					<p>.</p>
-				</div>
-				
-				<div class="produto-detalhe__acoes">
-					<div class="produto-detalhe__quantidade">
-						<button class="diminuir-quantidade" aria-label="Diminuir quantidade">
-							<i class="fas fa-minus"></i>
-						</button>
-						<span class="produto-detalhe__quantidade-valor">1</span>
-						<button class="aumentar-quantidade" aria-label="Aumentar quantidade">
-							<i class="fas fa-plus"></i>
-						</button>
-					</div>
-					<button class="botao botao--primario produto-detalhe__comprar">
-						<i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todos os Produtos - Leviatã</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/principal.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+  <link rel="stylesheet" href="../css/modal-produto.css">
+
+  <!-- Fontes e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho__container">
+      <button class="menu-mobile" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a href="/" class="cabecalho__logo">
+        <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+      </a>
+
+      <nav class="cabecalho__nav">
+        <ul class="nav__lista">
+          <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+          <li><a href="#" class="nav__link">Suporte</a></li>
+          <li><a href="#" class="nav__link">Faça Parte</a></li>
+          <li><a href="#" class="nav__link">Sobre nós</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__busca">
+        <form class="busca__formulario">
+          <input type="text" class="busca__input" placeholder="Buscar produtos...">
+          <button type="submit" class="busca__botao" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="cabecalho__acoes">
+        <a href="#" class="icone-favoritos" aria-label="Favoritos">
+          <i class="far fa-heart"></i>
+        </a>
+        <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="icone-usuario" aria-label="Minha conta">
+          <i class="far fa-user"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Produtos na página -->
+  <main>
+    <section class="ofertas__grid">
+      <div class="produto" onclick="abrirModalProduto('jogo1')">
+        <img src="/FrontEnd/img/jogo1.jpg" alt="Jogo X">
+        <h3>Jogo X</h3>
+        <p class="preco">R$ 192,00</p>
+      </div>
+
+      <div class="produto" onclick="abrirModalProduto('jogo2')">
+        <img src="/FrontEnd/img/jogo2.jpg" alt="Adventure Quest">
+        <h3>Adventure Quest</h3>
+        <p class="preco">R$ 149,90</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal do Produto -->
+  <div class="modal" id="modalProduto">
+    <div class="modal__conteudo">
+      <button class="modal__fechar" id="fecharModal" aria-label="Fechar modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="produto-detalhe">
+        <div class="produto-detalhe__imagem">
+          <img src="/placeholder.svg?height=300&width=300" alt="Nome do jogo" id="modalImagem">
+        </div>
+        <div class="produto-detalhe__info">
+          <div class="produto-detalhe__cabecalho">
+            <div class="produto-detalhe__categoria" id="modalCategoria">RPG</div>
+            <h2 class="produto-detalhe__titulo" id="modalTitulo">Nome do Jogo</h2>
+            <div class="produto-detalhe__avaliacao">
+              <div class="estrelas" id="modalEstrelas">
+                <i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="produto__reviews" id="modalReviews">(32)</span>
+            </div>
+          </div>
+
+          <div class="produto-detalhe__preco">
+            <span class="produto-detalhe__preco-atual" id="modalPrecoAtual">/</span>
+            <span class="produto-detalhe__preco-original" id="modalPrecoOriginal">/</span>
+          </div>
+
+          <div class="produto-detalhe__descricao">
+            <p>.</p>
+          </div>
+
+          <div class="produto-detalhe__acoes">
+            <div class="produto-detalhe__quantidade">
+              <button class="diminuir-quantidade" aria-label="Diminuir quantidade">
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="produto-detalhe__quantidade-valor">1</span>
+              <button class="aumentar-quantidade" aria-label="Aumentar quantidade">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <button class="botao botao--primario produto-detalhe__comprar">
+              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="../js/modal-produto.js"></script>
+</body>
+</html>

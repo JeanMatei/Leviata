@@ -1,11 +1,23 @@
- <header class="cabecalho">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/suporte.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <header class="cabecalho">
         <div class="cabecalho__container">
             <button class="menu-mobile" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
             </button>
             
             <a href="/" class="cabecalho__logo">
-                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+                <img src="/img/logo.png" alt="Leviatã">
             </a>
             
             <nav class="cabecalho__nav">
@@ -39,3 +51,23 @@
             </div>
         </div>
     </header>
+  <meta charset="UTF-8">
+  <title>Suporte | Leviatã</title>
+</head>
+<body>
+  <div class="suporte-container">
+    <div class="suporte-title">
+      <span class="icon">▌</span> Precisa de ajuda?
+    </div>
+    <form class="suporte-form">
+      <div class="suporte-inputs">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefone">
+      </div>
+      <textarea placeholder="Como podemos ajudar?" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </div>
+</body>
+</html>
