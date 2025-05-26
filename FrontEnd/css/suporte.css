@@ -1,0 +1,91 @@
+body {
+  background: #000000;
+  color: #bfc9d8;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.suporte-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.suporte-title {
+  color: #5a7ca7;
+  font-size: 1.5rem; 
+  font-weight: 600;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  width: 100%;
+  max-width: 1100px; 
+  margin-left: 0;
+}
+
+.suporte-title .icon {
+  color: #5a7ca7;
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.suporte-form {
+  background: #23242a;
+  padding: 48px 44px 40px 44px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 900px; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+
+.suporte-inputs {
+  display: flex;
+  gap: 16px; 
+}
+
+.suporte-form input,
+.suporte-form textarea {
+  background: #18191d;
+  border: none;
+  border-radius: 4px;
+  color: #bfc9d8;
+  padding: 16px; 
+  font-size: 1.1rem; 
+  outline: none;
+  width: 100%;
+  resize: none;
+}
+
+.suporte-form input::placeholder,
+.suporte-form textarea::placeholder {
+  color: #7a869a;
+}
+
+.suporte-form textarea {
+  min-height: 140px; 
+  margin-top: 8px;
+}
+
+.suporte-form button {
+  background: #5a7ca7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 0; 
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.suporte-form button:hover {
+  background: #46618a;
+}
