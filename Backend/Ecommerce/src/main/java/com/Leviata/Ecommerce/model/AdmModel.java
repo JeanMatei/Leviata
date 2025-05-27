@@ -16,13 +16,24 @@ public class AdmModel {
     @NotBlank
     private String nome;
 
+    @NotBlank
+    private String nm_empresa;
 
+    @NotBlank
     private String email;
 
     @NotBlank
     private String senha;
 
+    @NotBlank
+    private String whatsapp;
+
+    public AdmModel(int idadm) {
+        this.idadm = idadm;
+    }
+
     public AdmModel() {
+
     }
 
     public int getIdadm() {
@@ -41,6 +52,14 @@ public class AdmModel {
         this.nome = nome;
     }
 
+    public String getNm_empresa() {
+        return nm_empresa;
+    }
+
+    public void setNm_empresa(String nm_empresa) {
+        this.nm_empresa = nm_empresa;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -55,5 +74,13 @@ public class AdmModel {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getWhatsapp() {
+        return whatsapp;
+    }
+
+    public void setWhatsapp(String whatsapp) {
+        this.whatsapp = whatsapp;
     }
 }

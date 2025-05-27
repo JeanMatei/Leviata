@@ -105,7 +105,7 @@ public class ClienteController {
         return ResponseEntity.status(HttpStatus.OK).body(clienteExist.get());
     }
 
-    @GetMapping("/id")
+    @PutMapping("/id")
     public ResponseEntity<ClienteModel> updateCliente(@RequestBody @Valid ClienteRecordDto clienteRecordDto) {
         ClienteModel clienteModel = new ClienteModel();
 

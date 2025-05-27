@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tbCompra")
-public class CompraModel extends JogosModel {
+public class CompraModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -80,7 +80,7 @@ public class AdmController {
         return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
     }
 
-    @GetMapping("/id")
+    @PutMapping("/id")
     public ResponseEntity<AdmModel> updateAdm(@PathVariable(value = "idadm") int id,
                                               @RequestBody @Valid AdmRecordDto admRecordDto) {
         AdmModel admModel = new AdmModel();

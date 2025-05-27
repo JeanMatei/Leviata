@@ -3,7 +3,7 @@ package com.Leviata.Ecommerce.dto;
 import jakarta.validation.constraints.NotBlank;
 
 public record JogosRecordDto(
-        int id,
+
         @NotBlank String titulo,
         String capa,
         String descricao,
