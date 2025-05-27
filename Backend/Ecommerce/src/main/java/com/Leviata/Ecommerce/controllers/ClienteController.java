@@ -1,6 +1,7 @@
 package com.Leviata.Ecommerce.controllers;
 
 import com.Leviata.Ecommerce.dto.ClienteRecordDto;
+import com.Leviata.Ecommerce.model.AdmModel;
 import com.Leviata.Ecommerce.model.ClienteModel;
 import com.Leviata.Ecommerce.repositories.ClienteRepository;
 import jakarta.validation.Valid;
@@ -28,6 +29,8 @@ public class ClienteController {
 
         try {
             BeanUtils.copyProperties(clienteRecordDto, clienteModel);
+            ClienteModel savedCliente = clienteRepository.save(clienteModel);
+
         } catch (BeansException e) {
             throw new RuntimeException(e);
         }

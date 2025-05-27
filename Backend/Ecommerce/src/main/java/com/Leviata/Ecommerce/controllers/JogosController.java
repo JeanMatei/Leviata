@@ -1,6 +1,7 @@
 package com.Leviata.Ecommerce.controllers;
 
 import com.Leviata.Ecommerce.dto.JogosRecordDto;
+import com.Leviata.Ecommerce.model.AdmModel;
 import com.Leviata.Ecommerce.model.JogosModel;
 import com.Leviata.Ecommerce.repositories.JogosRepository;
 import jakarta.validation.Valid;
@@ -30,6 +31,8 @@ public class JogosController {
 
         try {
             BeanUtils.copyProperties(jogosRecordDto, jogosModel);
+            JogosModel savedjogo = jogosRepository.save(jogosModel);
+
         } catch (BeansException e) {
             throw new RuntimeException(e);
         }

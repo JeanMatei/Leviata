@@ -9,8 +9,6 @@ public class AdmModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @NotBlank
     private int idadm;
 
     @NotBlank

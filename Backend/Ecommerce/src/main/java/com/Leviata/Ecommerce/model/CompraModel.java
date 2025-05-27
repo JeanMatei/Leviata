@@ -1,6 +1,7 @@
 package com.Leviata.Ecommerce.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -12,16 +13,16 @@ public class CompraModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCompra;
 
-    @NotBlank
+    @NotNull
     private int clienteId;
 
-    @NotBlank
+    @NotNull
     private int jogosId;
 
-    @NotBlank
+    @NotNull
     private LocalDateTime dt_Compra;
 
-    @NotBlank
+    @NotNull
     private Double vl_Compra;
 
     public CompraModel() {

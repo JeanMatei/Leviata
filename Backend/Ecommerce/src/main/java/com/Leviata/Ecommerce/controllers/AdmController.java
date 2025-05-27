@@ -5,7 +5,6 @@ import com.Leviata.Ecommerce.model.AdmModel;
 import com.Leviata.Ecommerce.repositories.AdmRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,84 +22,50 @@ public class AdmController {
 
     @PostMapping
     public ResponseEntity<AdmModel> createAdm(@RequestBody @Valid AdmRecordDto admRecordDto) {
-
         AdmModel admModel = new AdmModel();
-
-        try {
-            BeanUtils.copyProperties(admRecordDto, admModel);
-        } catch (BeansException e) {
-            throw new RuntimeException(e);
-        }
-
-        Optional<AdmModel> admExist = admRepository.findById(admModel.getIdadm());
-
-        try {
-            if (admExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(admModel);
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return ResponseEntity.status(HttpStatus.CREATED).body(admModel);
+        BeanUtils.copyProperties(admRecordDto, admModel);
+        AdmModel savedAdm = admRepository.save(admModel);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedAdm);
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<AdmModel>> getAllAdm() {
-
-        return ResponseEntity.status(HttpStatus.OK).body(admRepository.findAll());
+    public ResponseEntity<List<AdmModel>> getAllAdm() {
+        return ResponseEntity.ok(admRepository.findAll());
     }
 
-    @GetMapping("/idadm")
-    public ResponseEntity<AdmModel> getAdmById(@RequestParam int idadm) {
-        Optional<AdmModel> admExist = admRepository.findAllByidadm(idadm);
-
-        try {
-            if (admExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
+    @GetMapping("/{idadm}")
+    public ResponseEntity<AdmModel> getAdmById(@PathVariable int idadm) {
+        return admRepository.findById(idadm)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
     @GetMapping("/email")
-    public ResponseEntity<AdmModel> getAdmByemail(@RequestParam String email) {
-
-        Optional<AdmModel> admExist = admRepository.findByEmail(email);
-
-        try {
-            if (admExist.isPresent()) {
-                return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
-            }
-        } catch (RuntimeException e) {
-            throw new RuntimeException(e);
-        }
-
-        return ResponseEntity.status(HttpStatus.OK).body(admExist.get());
+    public ResponseEntity<AdmModel> getAdmByEmail(@RequestParam String email) {
+        return admRepository.findByEmail(email)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
-    @PutMapping("/id")
-    public ResponseEntity<AdmModel> updateAdm(@PathVariable(value = "idadm") int id,
+    @PutMapping("/{idadm}")
+    public ResponseEntity<AdmModel> updateAdm(@PathVariable int idadm,
                                               @RequestBody @Valid AdmRecordDto admRecordDto) {
-        AdmModel admModel = new AdmModel();
-        Optional<AdmModel> admExist = admRepository.findById(admModel.getIdadm());
-
-        if (admExist.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(admModel);
+        Optional<AdmModel> admOptional = admRepository.findById(idadm);
+        if (admOptional.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
-
-        try {
-            if (admExist.isPresent()) {
-                BeanUtils.copyProperties(admRecordDto, admModel);
-                admModel.setIdadm(admExist.get().getIdadm());
-                return ResponseEntity.status(HttpStatus.OK).body(admModel);
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        var admModel1 = admExist.get();
+        AdmModel admModel = admOptional.get();
         BeanUtils.copyProperties(admRecordDto, admModel);
-        return ResponseEntity.status(HttpStatus.OK).body(admModel);
+        AdmModel updatedAdm = admRepository.save(admModel);
+        return ResponseEntity.ok(updatedAdm);
+    }
+
+    @DeleteMapping("/{idadm}")
+    public ResponseEntity<Void> deleteAdm(@PathVariable int idadm) {
+        if (!admRepository.existsById(idadm)) {
+            return ResponseEntity.notFound().build();
+        }
+        admRepository.deleteById(idadm);
+        return ResponseEntity.noContent().build();
     }
 }

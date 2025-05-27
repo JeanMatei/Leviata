@@ -2,6 +2,7 @@ package com.Leviata.Ecommerce.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tbJogos")
@@ -12,16 +13,14 @@ public class JogosModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idjogo;
 
-    @NotBlank
-    private String titulo;
+    @NotBlank private String titulo;
 
     private String capa;
     private String descricao;
     private String historia;
     private String modalidade;
 
-    @NotBlank
-    private Double preco;
+    @NotNull private Double preco;
 
     private String video_demo;
 

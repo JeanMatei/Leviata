@@ -1,6 +1,7 @@
 package com.Leviata.Ecommerce.controllers;
 
 import com.Leviata.Ecommerce.dto.CompraRecordDto;
+import com.Leviata.Ecommerce.model.AdmModel;
 import com.Leviata.Ecommerce.model.CompraModel;
 import com.Leviata.Ecommerce.repositories.CompraRepository;
 import jakarta.validation.Valid;
@@ -26,6 +27,8 @@ public class CompraController {
         CompraModel compraModel = new CompraModel();
         try {
             BeanUtils.copyProperties(compraRecordDto, compraModel);
+            CompraModel savedcompra = compraRepository.save(compraModel);
+
         } catch (BeansException e) {
             throw new RuntimeException("Erro ao copiar propriedades do DTO para o Model", e);
         }
