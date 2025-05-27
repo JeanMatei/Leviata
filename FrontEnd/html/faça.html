@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Leviatã | Faça Parte</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/componentes.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -10,24 +11,23 @@
     <link rel="stylesheet" href="../css/suporte.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
     <header class="cabecalho">
         <div class="cabecalho__container">
             <button class="menu-mobile" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
             </button>
-            
             <a href="/" class="cabecalho__logo">
                 <img src="../img/logo.png" alt="Leviatã">
             </a>
-            
             <nav class="cabecalho__nav">
                 <ul class="nav__lista">
-                    <li><a href="index.html" class="nav__link ">Home</a></li>
-                    <li><a href="suporte.html" class="nav__link ">Suporte</a></li>
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
                     <li><a href="faça.html" class="nav__link nav__link--ativo">Faça Parte</a></li>
                 </ul>
             </nav>
-            
             <div class="cabecalho__busca">
                 <form class="busca__formulario">
                     <input type="text" class="busca__input" placeholder="Buscar produtos...">
@@ -36,7 +36,6 @@
                     </button>
                 </form>
             </div>
-            
             <div class="cabecalho__acoes">
                 <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
                     <i class="fas fa-shopping-cart"></i>
@@ -47,3 +46,55 @@
             </div>
         </div>
     </header>
+
+    <main class="faça-main" style="background:#111; min-height:100vh;">
+        <section class="faça-container" style="display:flex;justify-content:space-between;align-items:flex-start;max-width:1200px;margin:40px auto 0;gap:32px;">
+            <div style="flex:1;">
+                <h2 style="color:#4b6cb7;font-size:1.5rem;margin-bottom:16px;"><i class="fas fa-envelope-open-text"></i> Entre em contato</h2>
+                <div style="background:#000;padding:24px 20px;border-radius:12px;box-shadow:0 2px 8px #0002;max-width:320px;">
+                    <div style="margin-bottom:24px;">
+                        <div style="display:flex;align-items:center;gap:10px;">
+                            <i class="fab fa-whatsapp" style="font-size:1.3em;color:#25d366;"></i>
+                            <span style="font-weight:600;">Whatsapp</span>
+                        </div>
+                        <div style="font-size:0.95em;color:#aaa;margin-top:6px;">
+                            Atendimento em até 24hrs<br>
+                            Telefone: +55 0119122222
+                        </div>
+                    </div>
+                    <hr style="border:0;border-top:1px solid #000;margin:16px 0;">
+                    <div>
+                        <div style="display:flex;align-items:center;gap:10px;">
+                            <i class="fas fa-envelope" style="font-size:1.2em;color:#4b6cb7;"></i>
+                            <span style="font-weight:600;">Email</span>
+                        </div>
+                        <div style="font-size:0.95em;color:#aaa;margin-top:6px;">
+                            Preencha nosso formulário e entraremos em contato com você em até 24 horas.<br>
+                            Email: leviata@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="flex:2;">
+                <div style="background:#222;padding:28px 32px;border-radius:12px;box-shadow:0 2px 8px #0002;">
+                    <h2 style="color:#5a7ec7;font-size:1.5rem;margin-bottom:16px;">
+                        <i class="fas fa-users"></i> Junte-se a nós
+                    </h2>
+                    <p style="color:#ccc;line-height:1.7;font-size:1.08em;">
+                        Temos o prazer de convidá-lo a conhecer e participar do Leviatã, um e-commerce dedicado ao enriquecimento intelectual e à comercialização do que há de melhor. Nossa missão é proporcionar um espaço de exploração, paixão e visão voltada à promoção da criatividade e originalidade como elementos de renovação cultural. 
+                        <br><br>
+                        Aqui, você encontrará não apenas produtos exclusivos, mas também uma filosofia que valoriza a liberdade de expressão e o pensamento crítico, em contraste com os modelos tradicionais. Com uma plataforma moderna, intuitiva e voltada para pessoas, valorizamos talentos autênticos e buscamos dar visibilidade a quem busca um caminho alternativo ao mercado tradicional.
+                        <br><br>
+                        Junte-se a nós e faça parte de uma comunidade que acredita no poder da independência criativa.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="flex:0 0 180px;align-self:flex-end;">
+                <img src="../img/" alt="Mascote Leviatã" style="max-width:180px;width:100%;display:block;">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
