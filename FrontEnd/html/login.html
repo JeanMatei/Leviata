@@ -5,24 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leviatã - E-commerce de Jogos Indie</title>
    <link rel="stylesheet" href="../css/login.css">
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/componentes.css">
+   <link rel="stylesheet" href="../css/layout.css">
+   <link rel="stylesheet" href="../css/principal.css">
+   <link rel="stylesheet" href="../css/responsivo.css">
+   <link rel="stylesheet" href="../css/modal-produto.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 </head>
 <body>
-    <div id="logo-container">
-  
-        <h2>Leviatã</h2>
-        
-    </div>
 
-    <div id="nav-container">
-       <nav id="nav-bar">
-        <a href="home.html" class="home-link">Home</a>
-        <a href="suporte.html" class="suporte-link">Suporte</a>
-        <a href="sobre-nos.html" class="sobre-nos-link">Sobre-nós</a>
-       </nav>
-    </div>
-    
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <button class="menu-mobile" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+                <h2>Leviatã</h2>
+            </a>
+            
+            <nav class="cabecalho__nav">
+                <ul class="nav__lista">
+                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+                    <li><a href="#" class="nav__link">Faça Parte</a></li>
+                    <li><a href="#" class="nav__link">Sobre nós</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cabecalho__busca">
+                <form class="busca__formulario">
+                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
+                    <button type="submit" class="busca__botao" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cabecalho__acoes">
+                <a href="#" class="icone-favoritos" aria-label="Favoritos">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="icone-usuario" aria-label="Minha conta">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+        
+
 
     <div id="cadastro-container">
         <h1>Entre com sua conta</h1>
@@ -31,7 +69,7 @@
         <form>
             <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar </button> <a href="login.html" class="forgot-password">Esqueceu sua senha?</a></h3>
+            <button class="button" type="submit">Entrar </button> <a href="login.html" class="forgot-password">Esqueceu sua senha?</a></h3>
         </form>
 
     </div>
