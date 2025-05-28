@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tbCliente")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class ClienteModel {
 
     @Id

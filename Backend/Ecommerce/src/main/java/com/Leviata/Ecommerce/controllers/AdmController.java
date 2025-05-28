@@ -47,10 +47,17 @@ public class AdmController {
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
+    @GetMapping("/nome")
+    public ResponseEntity<AdmModel> getAdmByNome(@RequestParam String nome) {
+        return admRepository.findByNome(nome)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+    }
+
     @PutMapping("/{idadm}")
     public ResponseEntity<AdmModel> updateAdm(@PathVariable int idadm,
                                               @RequestBody @Valid AdmRecordDto admRecordDto) {
-        Optional<AdmModel> admOptional = admRepository.findById(idadm);
+        Optional<AdmModel> admOptional = admRepository.findByidadm(idadm);
         if (admOptional.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
@@ -58,14 +65,5 @@ public class AdmController {
         BeanUtils.copyProperties(admRecordDto, admModel);
         AdmModel updatedAdm = admRepository.save(admModel);
         return ResponseEntity.ok(updatedAdm);
-    }
-
-    @DeleteMapping("/{idadm}")
-    public ResponseEntity<Void> deleteAdm(@PathVariable int idadm) {
-        if (!admRepository.existsById(idadm)) {
-            return ResponseEntity.notFound().build();
-        }
-        admRepository.deleteById(idadm);
-        return ResponseEntity.noContent().build();
     }
 }
