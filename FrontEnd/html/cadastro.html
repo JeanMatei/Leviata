@@ -4,24 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leviatã - E-commerce de Jogos Indie</title>
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/cadastro.css">
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/componentes.css">
+   <link rel="stylesheet" href="../css/layout.css">
+   <link rel="stylesheet" href="../css/principal.css">
+   <link rel="stylesheet" href="../css/responsivo.css">
+   <link rel="stylesheet" href="../css/modal-produto.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 </head>
 <body>
-    <div id="logo-container">
-  
-        <h2>Leviatã</h2>
-    
-
-    <div id="nav-container">
-       <nav id="nav-bar">
-        <a href="home.html" class="home-link">Home</a>
-        <a href="suporte.html" class="suporte-link">Suporte</a>
-        <a href="sobre-nos.html" class="sobre-nos-link">Sobre-nós</a>
-       </nav>
-    </div>
+  <header class="cabecalho">
+        <div class="cabecalho__container">
+            <button class="menu-mobile" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+                <h2>Leviatã</h2>
+            </a>
+            
+            <nav class="cabecalho__nav">
+                <ul class="nav__lista">
+                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+                    <li><a href="#" class="nav__link">Faça Parte</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cabecalho__busca">
+                <form class="busca__formulario">
+                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
+                    <button type="submit" class="busca__botao" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cabecalho__acoes">
+                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="icone-usuario" aria-label="Minha conta">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
     
 
     <div id="cadastro-container">
@@ -41,51 +72,48 @@
 
     </div>
 
-    <footer class="main-footer">
+ <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section exclusive">
                 <h3>Exclusive</h3>
                 <div class="subscribe">
-                    <p>Subscribe</p>
-                    <p>Get 10% off your first order</p>
+                    <p>Inscreva-se</p>
+                    <p>Ganhe 10% de desconto na sua primeira compra</p>
                     <div class="input-button-wrapper">
   <input type="email" placeholder="Enter your email" />
   <button type="submit"></button>
 </div>
 
-                </div>
+             </div>
             </div>
             <div class="footer-section support">
                 <h3>Support</h3>
                 <ul>
-                    <li>11 Bijoy sarani, Dhaka,</li>
-                    <li>DH 1515, Bangladesh.</li>
-                    <li><a href="mailto:exclusive-68868@gmail.com">exclusive-68868@gmail.com</a></li>
+                    <li>leviata@gmail.com</li>
                     <li>+88015-68868-9999</li>
                 </ul>
             </div>
             <div class="footer-section account">
                 <h3>Account</h3>
                 <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Login / Register</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Minha conta</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                    <li><a href="#">Curtidos</a></li>
+                    <li><a href="#">Produtos</a></li>
                 </ul>
             </div>
             <div class="footer-section quick-link">
                 <h3>Quick Link</h3>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Termos de uso</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-section download-app">
                 <h3>Download App</h3>
-                <p>Save $3 with App New User Only</p>
+                <p>Economize 5R$ sendo novo usuário!</p>
                 <div class="app-images">
                     <ul class="button-app">
                         <li><a href="googleplay.html"><button class="image-button googleplay-btn"></button></a></li>
@@ -97,12 +125,12 @@
         <div class="footer-bottom">
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-x"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="copyright">
-                <p>Copyright © 2025 E-Commerce App. All rights reserved</p>
+                <p>© Copyright Leviatã 2025. All rights reserved</p>
             </div>
         </div>
     </footer>
