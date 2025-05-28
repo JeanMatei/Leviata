@@ -20,10 +20,17 @@ public class ClienteController {
     private ClienteRepository clienteRepository;
 
     @PostMapping
-    public ResponseEntity<ClienteModel> createCliente(@RequestBody @Valid ClienteRecordDto clienteRecordDto) {
+    public ResponseEntity<Object> createCliente(@RequestBody @Valid ClienteRecordDto clienteRecordDto) {
+        Optional<ClienteModel> clienteExist = clienteRepository.findByEmail(clienteRecordDto.email());
+
+        if (clienteExist.isPresent()) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Cliente com este e-mail já existe.");
+        }
+
         ClienteModel clienteModel = new ClienteModel();
         BeanUtils.copyProperties(clienteRecordDto, clienteModel);
         ClienteModel savedCliente = clienteRepository.save(clienteModel);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(savedCliente);
     }
 
@@ -33,39 +40,56 @@ public class ClienteController {
     }
 
     @GetMapping("/{clienteId}")
-    public ResponseEntity<ClienteModel> getClienteById(@PathVariable int clienteId) {
+    public ResponseEntity<Object> getClienteById(@PathVariable int clienteId) {
         Optional<ClienteModel> clienteExist = clienteRepository.findAllByClienteId(clienteId);
-        return clienteExist.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+
+        if (clienteExist.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
+        }
+
+        return ResponseEntity.ok(clienteExist.get());
     }
 
     @GetMapping("/nome")
-    public ResponseEntity<ClienteModel> getClienteByNome(@RequestParam String nome) {
+    public ResponseEntity<Object> getClienteByNome(@RequestParam String nome) {
         Optional<ClienteModel> clienteExist = clienteRepository.findByNome(nome);
-        return clienteExist.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+
+        if (clienteExist.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
+        }
+
+        return ResponseEntity.ok(clienteExist.get());
     }
 
     @GetMapping("/email")
-    public ResponseEntity<ClienteModel> getClienteByEmail(@RequestParam String email) {
+    public ResponseEntity<Object> getClienteByEmail(@RequestParam String email) {
         Optional<ClienteModel> clienteExist = clienteRepository.findByEmail(email);
-        return clienteExist.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+
+        if (clienteExist.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
+        }
+
+        return ResponseEntity.ok(clienteExist.get());
     }
 
     @GetMapping("/telefone")
-    public ResponseEntity<ClienteModel> getClienteByTelefone(@RequestParam String telefone) {
+    public ResponseEntity<Object> getClienteByTelefone(@RequestParam String telefone) {
         Optional<ClienteModel> clienteExist = clienteRepository.findByTelefone(telefone);
-        return clienteExist.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+
+        if (clienteExist.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
+        }
+
+        return ResponseEntity.ok(clienteExist.get());
     }
 
     @PutMapping("/{clienteId}")
-    public ResponseEntity<ClienteModel> updateCliente(@PathVariable int clienteId,
-                                                      @RequestBody @Valid ClienteRecordDto clienteRecordDto) {
+    public ResponseEntity<Object> updateCliente(@PathVariable int clienteId,
+                                                @RequestBody @Valid ClienteRecordDto clienteRecordDto) {
         Optional<ClienteModel> clienteExist = clienteRepository.findById(clienteId);
+
         if (clienteExist.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente não encontrado.");
         }
 
         ClienteModel clienteModel = clienteExist.get();

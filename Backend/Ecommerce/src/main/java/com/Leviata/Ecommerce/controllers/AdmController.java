@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/adm")
+@CrossOrigin(origins = "*")
 public class AdmController {
 
     @Autowired
@@ -35,23 +36,29 @@ public class AdmController {
 
     @GetMapping("/{idadm}")
     public ResponseEntity<AdmModel> getAdmById(@PathVariable int idadm) {
-        return admRepository.findById(idadm)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+        Optional<AdmModel> adm = admRepository.findById(idadm);
+        if (adm.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(adm.get());
     }
 
     @GetMapping("/email")
     public ResponseEntity<AdmModel> getAdmByEmail(@RequestParam String email) {
-        return admRepository.findByEmail(email)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+        Optional<AdmModel> adm = admRepository.findByEmail(email);
+        if (adm.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(adm.get());
     }
 
     @GetMapping("/nome")
     public ResponseEntity<AdmModel> getAdmByNome(@RequestParam String nome) {
-        return admRepository.findByNome(nome)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+        Optional<AdmModel> adm = admRepository.findByNome(nome);
+        if (adm.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(adm.get());
     }
 
     @PutMapping("/{idadm}")
@@ -61,6 +68,7 @@ public class AdmController {
         if (admOptional.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
+
         AdmModel admModel = admOptional.get();
         BeanUtils.copyProperties(admRecordDto, admModel);
         AdmModel updatedAdm = admRepository.save(admModel);

@@ -1,17 +1,18 @@
 package com.Leviata.Ecommerce.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public record JogosRecordDto(
 
-        @NotBlank String titulo,
+        @NotBlank String aprovado,
+        String arquivo,
         String capa,
         String descricao,
         String historia,
         String modalidade,
-        String video_demo,
-        @NotBlank Double preco,
-        @NotBlank String aprovado,
-        String arquivo
-) {
-}
+        @NotNull Double preco,
+        @NotBlank String titulo,
+        String video_demo
+
+) {}
