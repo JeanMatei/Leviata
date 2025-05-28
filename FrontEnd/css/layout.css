@@ -17,11 +17,11 @@
 }
 
 .cabecalho__logo {
-  flex: 0 0 120px;
+  flex: 0 0 50px;
 }
 
 .cabecalho__logo img {
-  height: 32px;
+  height: 52px;
 }
 
 .cabecalho__nav {
