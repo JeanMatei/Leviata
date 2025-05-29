@@ -16,23 +16,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div style="color: #4fa3f7; font-weight: bold;">Leviatã</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Suporte</a>
-      <a href="#">Pedidos</a>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="O que você procura?" />
-      <span title="Carrinho" style="margin-left: 10px; cursor: pointer; color: #444;">
-        <i class="fas fa-shopping-cart"></i>
-      </span>
-      <span title="Adicionar Conta" style="margin-left: 15px; cursor: pointer; color: #444;">
-        <i class="fas fa-user-plus"></i>
-      </span>
-    </div>
-  </header>
+ <header class="cabecalho">
+        <div class="cabecalho__container">
+            <button class="menu-mobile" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+                <h2>Leviatã</h2>
+            </a>
+            
+            <nav class="cabecalho__nav">
+                <ul class="nav__lista">
+                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+                    <li><a href="#" class="nav__link">Faça Parte</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cabecalho__busca">
+                <form class="busca__formulario">
+                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
+                    <button type="submit" class="busca__botao" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cabecalho__acoes">
+                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="icone-usuario" aria-label="Minha conta">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
 
   <div class="container">
     <div class="resumo">
