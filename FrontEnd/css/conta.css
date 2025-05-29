@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: var(--espacamento-sm);
-}
+} 
 
 .btn-alter {
   display: flex;
@@ -48,7 +48,7 @@
   color: var(--cor-cinza-300);
   padding: var(--espacamento-sm) var(--espacamento-md);
   border-radius: var(--borda-raio-sm);
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.2s ease;
 }
 

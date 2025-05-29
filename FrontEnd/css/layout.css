@@ -14,10 +14,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--espacamento-padrao);
+  
 }
 
 .cabecalho__logo {
   flex: 0 0 50px;
+  
 }
 
 .cabecalho__logo img {
