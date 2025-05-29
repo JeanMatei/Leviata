@@ -1,18 +1,12 @@
 package com.Leviata.Ecommerce.dto;
 
-import com.Leviata.Ecommerce.model.CompraModel;
-import com.Leviata.Ecommerce.model.CompraModel.FormaPagamento;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record CompraRecordDto(
-
-        @NotBlank int cliente_Id,
-        @NotBlank int jogo_Id,
-        @NotBlank LocalDateTime dataCompra,
-        @NotBlank FormaPagamento formaPagamento
-){
-}
-
+        @NotNull int clienteId,
+        @NotNull int jogosId,
+        @NotNull LocalDateTime dt_Compra,
+        @NotNull Double vl_Compra
+) {}

@@ -11,8 +11,7 @@ public interface CompraRepository extends JpaRepository<CompraModel, Integer> {
 
     Optional<CompraModel> findById(int id);
 
-    Optional<CompraModel> findByclienteId(int idcliente);
+    Optional<CompraModel> findByCliente_ClienteId(int clienteId);
 
-    Optional<CompraModel> findByJogosId(int jogosId);
-
+    Optional<CompraModel> findByJogo_Idjogo(int jogoId);
 }

@@ -2,16 +2,16 @@ package com.Leviata.Ecommerce.dto;
 
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public record AvaRecordDto(
 
-       @NotBlank int compraId,
-       @NotBlank int nota,
+       @NotNull int idCompra,
+       @NotNull int nota,
        @NotBlank String comentario,
-       @NotBlank LocalDateTime dtAvaliacao
+       @NotNull LocalDateTime dtAvaliacao
 ) {
 
 

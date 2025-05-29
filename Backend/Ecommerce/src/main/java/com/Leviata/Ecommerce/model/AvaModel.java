@@ -14,14 +14,15 @@ public class AvaModel {
     private int id;
 
     @NotNull
-    private int compraId;
+    private int idCompra;
 
     @NotNull
-    private int nota;
+    private Integer nota;
 
     private String comentario;
 
-    private LocalDateTime dataAvaliacao;
+    @NotNull
+    private LocalDateTime dtAvaliacao;
 
     public AvaModel() {
     }
@@ -34,12 +35,12 @@ public class AvaModel {
         this.id = id;
     }
 
-    public int getCompraId() {
-        return compraId;
+    public int getIdCompra() {
+        return idCompra;
     }
 
-    public void setCompraId(int compraId) {
-        this.compraId = compraId;
+    public void setIdCompra(int idCompra) {
+        this.idCompra = idCompra;
     }
 
     public int getNota() {
@@ -58,11 +59,11 @@ public class AvaModel {
         this.comentario = comentario;
     }
 
-    public LocalDateTime getDataAvaliacao() {
-        return dataAvaliacao;
+    public LocalDateTime getDtAvaliacao() {
+        return dtAvaliacao;
     }
 
-    public void setDataAvaliacao(LocalDateTime dataAvaliacao) {
-        this.dataAvaliacao = dataAvaliacao;
+    public void setDtAvaliacao(LocalDateTime dtAvaliacao) {
+        this.dtAvaliacao = dtAvaliacao;
     }
 }

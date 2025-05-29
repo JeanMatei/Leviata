@@ -1,6 +1,6 @@
 package com.Leviata.Ecommerce.model;
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
@@ -13,11 +13,13 @@ public class CompraModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCompra;
 
-    @NotNull
-    private int clienteId;
+    @ManyToOne
+    @JoinColumn(name = "clienteId", referencedColumnName = "clienteId")
+    private ClienteModel cliente;
 
-    @NotNull
-    private int jogosId;
+    @ManyToOne
+    @JoinColumn(name = "jogosId", referencedColumnName = "idjogo")
+    private JogosModel jogo;
 
     @NotNull
     private LocalDateTime dt_Compra;
@@ -25,13 +27,8 @@ public class CompraModel {
     @NotNull
     private Double vl_Compra;
 
-    public CompraModel() {
-    }
+    public CompraModel() {}
 
-    public enum FormaPagamento {
-        CARTAO,
-        EPIX
-    }
     public int getIdCompra() {
         return idCompra;
     }
@@ -40,20 +37,20 @@ public class CompraModel {
         this.idCompra = idCompra;
     }
 
-    public int getClienteId() {
-        return clienteId;
+    public ClienteModel getCliente() {
+        return cliente;
     }
 
-    public void setClienteId(int clienteId) {
-        this.clienteId = clienteId;
+    public void setCliente(ClienteModel cliente) {
+        this.cliente = cliente;
     }
 
-    public int getJogosId() {
-        return jogosId;
+    public JogosModel getJogo() {
+        return jogo;
     }
 
-    public void setJogosId(int jogosId) {
-        this.jogosId = jogosId;
+    public void setJogo(JogosModel jogo) {
+        this.jogo = jogo;
     }
 
     public LocalDateTime getDt_Compra() {
