@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leviatã - Perfil do Usuário</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <header class="cabecalho">
+        <div class="cabecalho__container">
+            <button class="menu-mobile" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+            </a>
+            
+            <nav class="cabecalho__nav">
+                <ul class="nav__lista">
+                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+                    <li><a href="faça.html" class="nav__link">Faça Parte</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cabecalho__busca">
+                <form class="busca__formulario">
+                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
+                    <button type="submit" class="busca__botao" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cabecalho__acoes">
+                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="conta.html" class="icone-usuario" aria-label="Minha conta">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+  <main>
+    <div class="container">
+      <div class="content-grid">
+        <section class="user-profile">
+          <div class="profile-header">
+            <div class="user-avatar">
+              👤
+            </div>
+            <h2 class="user-title">Usuário x</h2>
+            
+            <div class="profile-actions">
+              <button class="btn-alter">
+                ➕ Alterar usuário
+              </button>
+              <button class="btn-logout">
+                ➡️
+              </button>
+            </div>
+          </div>
+          
+          <div class="profile-form">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" value="Pedro Henrique">
+            </div>
+            
+            <div class="form-group">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" id="sobrenome" value="Cucker Santana">
+            </div>
+            
+            <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="text" id="cpf" value="122.334.687.27">
+            </div>
+            
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="text" id="telefone" value="48 99673 1277">
+            </div>
+            
+            <div class="form-group">
+              <label for="data-nascimento">Data de Nascimento</label>
+              <input type="text" id="data-nascimento" value="01/05/2007">
+            </div>
+          </div>
+        </section>
+        
+        <section class="game-library">
+          <div class="library-header">
+            📚
+            <h2>Biblioteca</h2>
+          </div>
+          
+          <div class="games-grid">
+            <div class="game-card">
+              <img src="/" alt="Hollow Knight">
+              <h3>Hollow Knight</h3>
+            </div>
+            
+            <div class="game-card">
+              <img src="/" alt="Minecraft">
+              <h3>Minecraft</h3>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
