@@ -7,8 +7,8 @@
 
 body {
   background-color: #0f0f0f;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #e0e0e0;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,22 +20,19 @@ main {
   padding: 2rem;
   border-radius: 12px;
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  text-align: center;
-  color: #ffffff;
 }
 
 p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  text-align: center;
-  color: #cccccc;
 }
 
 form {
@@ -47,15 +44,14 @@ form {
 fieldset.estrelas {
   border: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
   background: #262626;
   padding: 1rem;
   border-radius: 8px;
 }
 
 .estrelas label {
-  font-size: 1.5rem;
-  color: #555;
   cursor: pointer;
 }
 
@@ -63,16 +59,13 @@ fieldset.estrelas {
   display: none;
 }
 
-.estrelas input[type="radio"]:checked + span {
-  color: #ffcc00;
-}
-
-.estrelas label:hover span {
-  color: #ffcc00;
+.estrelas span {
+  font-size: 2rem;
+  color: #555;
+  transition: color 0.2s;
 }
 
 textarea {
-  width: 100%;
   background: #262626;
   color: #ccc;
   border: none;
@@ -94,7 +87,7 @@ button {
   padding: 0.75rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 button:hover {
@@ -102,20 +95,17 @@ button:hover {
 }
 
 .acoes {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
 }
 
 .acoes a {
   color: #00bfff;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .acoes a:hover {
   color: #0099cc;
 }
-
-/* Avaliações de estrelas estilo gráfico (opcional) */

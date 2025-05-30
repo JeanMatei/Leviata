@@ -2,6 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avaliação e Download do Jogo</title>
     <link rel="stylesheet" href="../css/avaliacao.css" />
   </head>
@@ -10,30 +11,34 @@
       <h1>Obrigado pela compra!</h1>
       <p>Por favor, avalie sua experiência antes de baixar o jogo:</p>
 
-      <form>
+      <form id="avaliacaoForm">
         <fieldset class="estrelas">
           <legend>Avaliação (obrigatória):</legend>
-
-          <label>
-            <input type="radio" name="avaliacao" value="1" required />
-            ★☆☆☆☆
-          </label>
-          <label>
-            <input type="radio" name="avaliacao" value="2" />
-            ★★☆☆☆
-          </label>
-          <label>
-            <input type="radio" name="avaliacao" value="3" />
-            ★★★☆☆
-          </label>
-          <label>
-            <input type="radio" name="avaliacao" value="4" />
-            ★★★★☆
-          </label>
-          <label>
-            <input type="radio" name="avaliacao" value="5" />
-            ★★★★★
-          </label>
+          <label
+            ><input type="radio" name="avaliacao" value="1" /><span
+              >★</span
+            ></label
+          >
+          <label
+            ><input type="radio" name="avaliacao" value="2" /><span
+              >★</span
+            ></label
+          >
+          <label
+            ><input type="radio" name="avaliacao" value="3" /><span
+              >★</span
+            ></label
+          >
+          <label
+            ><input type="radio" name="avaliacao" value="4" /><span
+              >★</span
+            ></label
+          >
+          <label
+            ><input type="radio" name="avaliacao" value="5" /><span
+              >★</span
+            ></label
+          >
         </fieldset>
 
         <label for="comentario">Comentário (opcional):</label>
@@ -44,13 +49,15 @@
           placeholder="Deixe um comentário se quiser..."
         ></textarea>
 
-        <button type="submit">Enviar Avaliação e Baixar Jogo</button>
+        <button type="submit" id="enviarBtn">Enviar Avaliação</button>
       </form>
 
-      <div class="acoes">
+      <div class="acoes" id="acoes" style="display: none">
         <a href="jogo.pdf" download>Baixar Jogo (PDF)</a>
         <a href="index.html">Voltar para a Loja</a>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
