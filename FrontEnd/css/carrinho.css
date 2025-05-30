@@ -115,7 +115,7 @@ border-top: 1px solid #333;
   flex-wrap: wrap;
 }
 
-.opcao-pagamento {
+.opcao-pagamento{
   display: inline-flex;
   align-items: center;
   padding: 5px 0px;
@@ -137,8 +137,8 @@ border-top: 1px solid #333;
   margin-right: 8px;
   cursor: pointer;
   background-color: transparent;
-  position: relative;
 }
+
 
 .opcao-pagamento input[type="radio"]:checked::before {
   content: '';
@@ -152,18 +152,13 @@ border-top: 1px solid #333;
 }
 
 
-.opcao-pagamento img {
+.opcao-pagamento img{
+  display: flex;
   height: 18px;
   width: auto;
   border-radius: 4px;
   padding: 2px;
 }
-
-.pix{
-width: 100px;
-
-}
-
 
 .formulario {
   width: 50%;
