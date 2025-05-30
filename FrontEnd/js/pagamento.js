@@ -1,21 +1,11 @@
-document.getElementById("metodo").addEventListener("change", function () {
-  const metodo = this.value;
-  const pixDiv = document.getElementById("pix");
-  const cartaoDiv = document.getElementById("cartao");
-
-  if (metodo === "pix") {
-    pixDiv.style.display = "block";
-    cartaoDiv.style.display = "none";
-  } else if (metodo === "cartao") {
-    pixDiv.style.display = "none";
-    cartaoDiv.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+  
+  function validarCPF(cpf) {
+    return /^\d{11}$/.test(cpf);
   }
-});
 
-document.getElementById("confirmar").addEventListener("click", function () {
-  const metodo = document.getElementById("metodo").value;
 
-  if (metodo === "pix") {
+  document.getElementById("confirmar").addEventListener("click", function () {
     const nome = document.getElementById("nomePix").value.trim();
     const cpf = document.getElementById("cpfPix").value.trim();
 
@@ -24,11 +14,11 @@ document.getElementById("confirmar").addEventListener("click", function () {
       return;
     }
 
-    alert(`Pagamento via PIX confirmado!\nNome: ${nome}\nCPF: ${cpf}`);
+    if (!validarCPF(cpf)) {
+      alert("CPF inválido! Digite 11 números.");
+      return;
+    }
 
-  } else if (metodo === "cartao") {
-    alert("Pagamento via Cartão confirmado!");
-  } else {
-    alert("Selecione um método de pagamento.");
-  }
+    alert(`Pagamento via PIX confirmado!\nNome: ${nome}\nCPF: ${cpf}`);
+  });
 });

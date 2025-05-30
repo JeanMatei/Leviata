@@ -7,33 +7,17 @@
     <script src="pagamento.js" defer></script>
   </head>
   <body>
-    <h1>Pagamento</h1>
+    <h1>Pagamento via PIX</h1>
 
-    <label for="metodo">Método de Pagamento:</label>
-    <select id="metodo">
-      <option value="pix">PIX</option>
-      <option value="cartao">Cartão de Crédito</option>
-    </select>
+    <h2>QR Code PIX</h2>
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoLojaVirtual"
+      alt="QR Code PIX"
+    />
+    <p>Escaneie o QR Code para pagar via PIX.</p>
 
-    <div id="pix">
-      <h2>QR Code PIX</h2>
-      <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoLojaVirtual"
-        alt="QR Code PIX"
-      />
-      <p>Escaneie o QR Code para pagar via PIX.</p>
-
-     
-      <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
-      <input type="text" id="cpfPix" placeholder="CPF" maxlength="11" /><br />
-    </div>
-
-    <div id="cartao" style="display: none">
-      <input type="text" placeholder="Número do Cartão" /><br />
-      <input type="text" placeholder="Nome no Cartão" /><br />
-      <input type="text" placeholder="Validade (MM/AA)" /><br />
-      <input type="text" placeholder="CVV" /><br />
-    </div>
+    <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
+    <input type="text" id="cpfPix" placeholder="CPF (apenas números)" maxlength="11" /><br />
 
     <button id="confirmar">Confirmar Pagamento</button>
   </body>
