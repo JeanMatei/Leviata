@@ -1,73 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resumo do Pedido | Leviatã</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../css/carrinho.css">
-   <link rel="stylesheet" href="../css/base.css">
-   <link rel="stylesheet" href="../css/componentes.css">
-   <link rel="stylesheet" href="../css/layout.css">
-   <link rel="stylesheet" href="../css/principal.css">
-   <link rel="stylesheet" href="../css/responsivo.css">
-   <link rel="stylesheet" href="../css/modal-produto.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
- <header class="cabecalho">
-        <div class="cabecalho__container">
-            <button class="menu-mobile" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <a href="/" class="cabecalho__logo">
-                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
-                <h2>Leviatã</h2>
-            </a>
-            
-            <nav class="cabecalho__nav">
-                <ul class="nav__lista">
-                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
-                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
-                    <li><a href="#" class="nav__link">Faça Parte</a></li>
-                </ul>
-            </nav>
-            
-            <div class="cabecalho__busca">
-                <form class="busca__formulario">
-                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
-                    <button type="submit" class="busca__botao" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
-            
-            <div class="cabecalho__acoes">
-                <a href="#" class="icone-usuario" aria-label="Minha conta">
-                    <i class="far fa-user"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento</title>
+    <script src="pagamento.js" defer></script>
+  </head>
+  <body>
+    <h1>Pagamento</h1>
 
-  <div class="container">
-    <div class="resumo">
-      <div class="titulo-resumo">
-        <div class="icone"></div>
-        <h2>Resumo do pedido</h2>
-      </div>
+    <label for="metodo">Método de Pagamento:</label>
+    <select id="metodo">
+      <option value="pix">PIX</option>
+      <option value="cartao">Cartão de Crédito</option>
+    </select>
 
-      <div class="linha">
-        <span>Jogo 1</span>
-        <span>R$650</span>
-      </div>
-      <div class="linha">
-        <span>Jogo 2</span>
-        <span>R$1100</span>
-      </div>
+    <div id="pix">
+      <h2>QR Code PIX</h2>
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoLojaVirtual"
+        alt="QR Code PIX"
+      />
+      <p>Escaneie o QR Code para pagar via PIX.</p>
 
+<<<<<<< HEAD
       <div class="subtot">
         <span>Subtotal:</span>
         <span>R$1750</span>
@@ -82,7 +38,7 @@
       <div class="formas-pagamento">
         <label class="opcao-pagamento">
           <input type="radio" name="pagamento" value="pix">
-          <img src="../img/pix.png" alt="PIX">
+          <img class="pix" src="../img/pix.png" alt="PIX">
         </label>
         <label class="opcao-pagamento">
           <input type="radio" name="pagamento" value="visa">
@@ -93,6 +49,11 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
         </label>
       </div>
+=======
+     
+      <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
+      <input type="text" id="cpfPix" placeholder="CPF" maxlength="11" /><br />
+>>>>>>> 06989daf7dd0103d7f7943576da57f153d4deb67
     </div>
 
     <div id="cartao" style="display: none">
