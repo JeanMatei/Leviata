@@ -1,0 +1,114 @@
+/* Seção do Perfil do Usuário */
+.user-profile {
+  background-color: var(--cor-preto);
+  border-radius: var(--borda-raio-md);
+  overflow: hidden;
+}
+
+/* Cabeçalho do Perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--espacamento-xl);
+  position: relative;
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  background-color: var(--cor-cinza-700);
+  border-radius: var(--borda-raio-total);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--espacamento-md);
+  font-size: 32px;
+}
+
+.user-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--cor-azul-400);
+  margin: 0;
+}
+
+.profile-actions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+} 
+
+.btn-alter {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+  background-color: var(--cor-cinza-700);
+  color: var(--cor-cinza-300);
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  border-radius: var(--borda-raio-sm);
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-alter:hover {
+  background-color: var(--cor-cinza-600);
+}
+
+.btn-logout {
+  color: var(--cor-cinza-400);
+  transition: color 0.2s ease;
+  padding: var(--espacamento-sm);
+  font-size: 20px;
+}
+
+.btn-logout:hover {
+  color: var(--cor-cinza-200);
+}
+
+/* Formulário do Perfil */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xs);
+}
+
+.form-group label {
+  font-size: 14px;
+  color: var(--cor-cinza-300);
+}
+
+.form-group input {
+  background-color: var(--cor-cinza-700);
+  border-radius: var(--borda-raio-sm);
+  padding: var(--espacamento-md);
+  font-size: 16px;
+  color: var(--cor-cinza-200);
+  transition: background-color 0.2s ease;
+}
+
+.form-group input:focus {
+  background-color: var(--cor-cinza-600);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espacamento-md);
+    margin-bottom: var(--espacamento-lg);
+  }
+
+  .profile-actions {
+    position: relative;
+    margin-top: var(--espacamento-md);
+  }
+}

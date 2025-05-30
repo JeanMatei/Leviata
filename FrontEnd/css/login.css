@@ -241,21 +241,6 @@ input[type="password"] {
 }
 
 
-.home-link,
-.suporte-link,
-.sobre-nos-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.home-link:hover,
-.suporte-link:hover,
-.sobre-nos-link:hover {
-    color: #ddd;
-}
-
 #nav-container {
     display: flex;
     position: relative;
@@ -309,12 +294,6 @@ input[type="password"] {
         margin: 100px auto 40px auto;
     }
 
-    #logo-container {
-        left: auto;
-        margin: 0 auto;
-        text-align: center;
-    }
-
     #nav-container {
         left: auto;
         justify-content: center;
@@ -341,11 +320,6 @@ input[type="password"] {
     body {
         background-size: 200px;
         background-position: center 250px; 
-    }
-
-    #logo-container {
-        margin: 30px auto 0 auto;
-        padding-left: 80px;
     }
 
     #nav-container {
@@ -376,13 +350,6 @@ input[type="password"] {
 
     h1, h3 {
         margin-right: 0;
-    }
-
-    .login-link {
-        margin-left: 0;
-        display: block;
-        text-align: center;
-        top: 0;
     }
 
     .footer-section h3,
