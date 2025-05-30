@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento</title>
+    <script src="pagamento.js" defer></script>
+  </head>
+  <body>
+    <h1>Pagamento via PIX</h1>
+
+    <h2>QR Code PIX</h2>
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoLojaVirtual"
+      alt="QR Code PIX"
+    />
+    <p>Escaneie o QR Code para pagar via PIX.</p>
+
+    <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
+    <input type="text" id="cpfPix" placeholder="CPF (apenas números)" maxlength="11" /><br />
+
+    <button id="confirmar">Confirmar Pagamento</button>
+  </body>
+</html>
