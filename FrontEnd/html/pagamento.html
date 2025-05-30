@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagamento</title>
-    <script src="pagamento.js" defer></script>
+    <link rel="stylesheet" href="../css/" />
+    <script src="../js/pagamento.js" defer></script>
   </head>
   <body>
     <h1>Pagamento via PIX</h1>
@@ -17,7 +18,12 @@
     <p>Escaneie o QR Code para pagar via PIX.</p>
 
     <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
-    <input type="text" id="cpfPix" placeholder="CPF (apenas números)" maxlength="11" /><br />
+    <input
+      type="text"
+      id="cpfPix"
+      placeholder="CPF (apenas números)"
+      maxlength="11"
+    /><br />
 
     <button id="confirmar">Confirmar Pagamento</button>
   </body>
