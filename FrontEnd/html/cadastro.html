@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header class="cabecalho">
+    <header class="cabecalho">
         <div class="cabecalho__container">
             <button class="menu-mobile" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
@@ -52,22 +52,22 @@
             </div>
         </div>
     </header>
-    
+        
 
     <div id="cadastro-container">
         <h1>Criar uma conta</h1>
         <h3>Inserir seus dados abaixo!</h3>
 
-        <form>
+        <form id="cadastro-form"> 
             <input type="text" id="nome" name="nome" placeholder="Nome" required>
             <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-           <button class="button" type="submit">Criar conta </button> <h3 class="button-h3">Já possui uma conta?</h3><a href="cadastro.html" class="forgot-login">Log in</a></h3>
+           <button class="button" type="submit">Criar conta </button> <h3 class="button-h3">Já possui uma conta?</h3><a href="cadastro.html" class="forgot-login">Log in</a>
         </form>
 
     </div>
 
- <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section exclusive">
                 <h3>Exclusive</h3>
@@ -79,7 +79,7 @@
   <button type="submit"></button>
 </div>
 
-             </div>
+                </div>
             </div>
             <div class="footer-section support">
                 <h3>Support</h3>
@@ -129,6 +129,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="../js/cadastro.js"></script>
 </body>
 </html>
