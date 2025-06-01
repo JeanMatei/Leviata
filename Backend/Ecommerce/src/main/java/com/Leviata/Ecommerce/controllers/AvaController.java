@@ -17,6 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/avaliacoes")
+@CrossOrigin(origins = "*")
 public class AvaController {
 
     @Autowired
