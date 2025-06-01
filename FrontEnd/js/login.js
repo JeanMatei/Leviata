@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const senha = document.getElementById('senha').value.trim();
 
             if (email === '' || senha === '') {
-                alert('Por favor, preencha todos os campos.');
+                alert('Por favor, preencha todos os campos!');
                 return; 
             }
 
