@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagamento</title>
-    <link rel="stylesheet" href="../css/pagamento.css" />
-    <script src="../js/pagamento.js" defer></script>
-  </head>
-  <body>
-    <h1>Pagamento via PIX</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento - Leviatã</title>
+  <link rel="stylesheet" href="../css/pagamento.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Resumo do Pedido</h1>
 
-    <h2>QR Code PIX</h2>
-    <img
-      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoLojaVirtual"
-      alt="QR Code PIX"
-    />
-    <p>Escaneie o QR Code para pagar via PIX.</p>
+    <div class="resumo">
+      <p>Jogo 1 - R$44,90</p>
+      <p>Jogo 2 - R$74,90</p>
+      <p class="total">Total: R$119,80</p>
+    </div>
 
-    <input type="text" id="nomePix" placeholder="Nome Completo" /><br />
-    <input
-      type="text"
-      id="cpfPix"
-      placeholder="CPF (apenas números)"
-      maxlength="11"
-    /><br />
+    <h2>Forma de pagamento</h2>
+    <div class="formas-pagamento">
+      <label><input type="radio" name="pagamento" value="cartao" checked> Cartão de Crédito</label>
+      <label><input type="radio" name="pagamento" value="pix"> Pix</label>
+    </div>
 
-    <button id="confirmar">Confirmar Pagamento</button>
-  </body>
+    <form id="form-cartao" class="formulario ativo">
+      <input type="text" placeholder="Nome do Titular" required>
+      <input type="text" placeholder="Número do Cartão" required>
+      <input type="text" placeholder="Data de Validade (MM/AA)" required>
+      <input type="text" placeholder="Código de Segurança" required>
+      <button type="submit">Finalizar Pagamento</button>
+    </form>
+
+    <div id="form-pix" class="formulario">
+      <p>Escaneie o QR Code ou copie o código Pix:</p>
+      <canvas id="qr-pix"></canvas>
+      <input type="text" id="codigo-pix" readonly>
+      <button id="finalizar-pix">Finalizar Pagamento</button>
+    </div>
+  </div>
+
+  <script src="../js/pagamento.js"></script>
+</body>
 </html>
