@@ -33,3 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('ERRO: O formulário de cadastro com ID "cadastro-form" não foi encontrado. Verifique o HTML.');
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('email-btn');
+    const input = document.getElementById('email-email');
+
+    btn.addEventListener('click', () => {
+        const email = input.value.trim();
+        const emailValido = /^[^\s@]+@(hotmail\.com|gmail\.com)$/i.test(email);
+
+        if (!emailValido) {
+            alert('Por favor, insira um e-mail válido que termine com @hotmail.com ou @gmail.com.');
+        } else {
+            alert(`Obrigado por se inscrever, ${email}!`);
+            window.location.href = 'index.html';
+        }
+    });
+});
