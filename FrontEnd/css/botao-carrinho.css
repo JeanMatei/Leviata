@@ -1,0 +1,47 @@
+
+.botao.botao--carrinho {
+  width: 100%;
+  border-radius: var(--borda-arredondada);
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  padding: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transicao-padrao);
+}
+
+.botao.botao--carrinho:hover {
+  background-color: var(--cor-texto);
+  color: var(--cor-primaria);
+  transform: translateY(-2px);
+}
+
+
+.produto__rodape {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.botao.botao--carrinho:active {
+  animation: pulsar 0.3s ease;
+}
+
+
+@media (max-width: 480px) {
+  .botao.botao--carrinho {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
