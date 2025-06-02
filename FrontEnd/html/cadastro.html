@@ -1,134 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leviatã - E-commerce de Jogos Indie</title>
-   <link rel="stylesheet" href="../css/cadastro.css">
-   <link rel="stylesheet" href="../css/base.css">
-   <link rel="stylesheet" href="../css/componentes.css">
-   <link rel="stylesheet" href="../css/layout.css">
-   <link rel="stylesheet" href="../css/principal.css">
-   <link rel="stylesheet" href="../css/responsivo.css">
-   <link rel="stylesheet" href="../css/modal-produto.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leviatã - E-commerce de Jogos Indie</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/principal.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+  <link rel="stylesheet" href="../css/modal-produto.css">
+
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <div class="cabecalho__container">
-            <button class="menu-mobile" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <a href="/" class="cabecalho__logo">
-                <h2>Leviatã</h2>
-            </a>
-            
-            <nav class="cabecalho__nav">
-                <ul class="nav__lista">
-                    <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
-                    <li><a href="suporte.html" class="nav__link">Suporte</a></li>
-                    <li><a href="#" class="nav__link">Faça Parte</a></li>
-                </ul>
-            </nav>
-            
-            <div class="cabecalho__busca">
-                <form class="busca__formulario">
-                    <input type="text" class="busca__input" placeholder="Buscar produtos...">
-                    <button type="submit" class="busca__botao" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
-            
-            <div class="cabecalho__acoes">
-                <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-                <a href="#" class="icone-usuario" aria-label="Minha conta">
-                    <i class="far fa-user"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-        
 
-    <div id="cadastro-container">
-        <h1>Criar uma conta</h1>
-        <h3>Inserir seus dados abaixo!</h3>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="cabecalho__container">
+      <button class="menu-mobile" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
 
-        <form id="cadastro-form"> 
-            <input type="text" id="nome" name="nome" placeholder="Nome" required>
-            <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
-            <input type="password" id="senha" name="senha" placeholder="Senha" required>
-           <button class="button" type="submit">Criar conta </button> <h3 class="button-h3">Já possui uma conta?</h3><a href="cadastro.html" class="forgot-login">Log in</a>
+      <a href="/" class="cabecalho__logo">
+        <img src="/FrontEnd/img/logo.png" alt="Leviatã">
+        <h2>Leviatã</h2>
+      </a>
+
+      <nav class="cabecalho__nav">
+        <ul class="nav__lista">
+          <li><a href="index.html" class="nav__link nav__link--ativo">Home</a></li>
+          <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+          <li><a href="#" class="nav__link">Faça Parte</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__busca">
+        <form class="busca__formulario">
+          <input type="text" class="busca__input" placeholder="Buscar produtos...">
+          <button type="submit" class="busca__botao" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
+      </div>
 
+      <div class="cabecalho__acoes">
+        <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="icone-usuario" aria-label="Minha conta">
+          <i class="far fa-user"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Formulário de Cadastro -->
+  <div id="cadastro-container">
+    <h1>Criar uma conta</h1>
+    <h3>Inserir seus dados abaixo!</h3>
+
+    <form id="cadastro-form"> 
+      <input type="text" id="nome" name="nome" placeholder="Nome" required>
+      <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required>
+      <button class="button" type="submit">Criar conta</button>
+      <h3 class="button-h3">Já possui uma conta?</h3>
+      <a href="cadastro.html" class="forgot-login">Log in</a>
+    </form>
+  </div>
+
+  <!-- Lista de Clientes -->
+  <section style="padding: 2rem;">
+    <h2>Clientes Cadastrados</h2>
+    <ul id="lista-clientes" style="list-style: none; padding-left: 0;"></ul>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section exclusive">
+        <h3>Exclusive</h3>
+        <div class="subscribe">
+          <p>Inscreva-se</p>
+          <p>Ganhe 10% de desconto na sua primeira compra</p>
+          <div class="input-button-wrapper">
+            <input type="email" id="email-email" placeholder="Enter your email">
+            <button type="button" id="email-btn"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section support">
+        <h3>Support</h3>
+        <ul>
+          <li>leviata@gmail.com</li>
+          <li>+88015-68868-9999</li>
+        </ul>
+      </div>
+
+      <div class="footer-section account">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="#">Minha conta</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Carrinho</a></li>
+          <li><a href="#">Curtidos</a></li>
+          <li><a href="#">Produtos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section quick-link">
+        <h3>Quick Link</h3>
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section download-app">
+        <h3>Download App</h3>
+        <p>Economize 5R$ sendo novo usuário!</p>
+        <div class="app-images">
+          <ul class="button-app">
+            <li><a href="googleplay.html"><button class="image-button googleplay-btn"></button></a></li>
+            <li><a href="appstore.html"><button class="image-button2 appstore-btn"></button></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section exclusive">
-                <h3>Exclusive</h3>
-                <div class="subscribe">
-                    <p>Inscreva-se</p>
-                    <p>Ganhe 10% de desconto na sua primeira compra</p>
-                           <div class="input-button-wrapper">
-  <input type="email" id="email-email" placeholder="Enter your email">
-  <button type="button" id="email-btn"></button>
-</div>
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        <p>© Copyright Leviatã 2025. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
 
-                </div>
-            </div>
-            <div class="footer-section support">
-                <h3>Support</h3>
-                <ul>
-                    <li>leviata@gmail.com</li>
-                    <li>+88015-68868-9999</li>
-                </ul>
-            </div>
-            <div class="footer-section account">
-                <h3>Account</h3>
-                <ul>
-                    <li><a href="#">Minha conta</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Carrinho</a></li>
-                    <li><a href="#">Curtidos</a></li>
-                    <li><a href="#">Produtos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section quick-link">
-                <h3>Quick Link</h3>
-                <ul>
-                    <li><a href="#">Termos de uso</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-section download-app">
-                <h3>Download App</h3>
-                <p>Economize 5R$ sendo novo usuário!</p>
-                <div class="app-images">
-                    <ul class="button-app">
-                        <li><a href="googleplay.html"><button class="image-button googleplay-btn"></button></a></li>
-                        <li><a href="appstore.html"><button class="image-button2 appstore-btn"></button></a></li>
-                </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-x"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="copyright">
-                <p>© Copyright Leviatã 2025. All rights reserved</p>
-            </div>
-        </div>
-    </footer>
-    <script src="../js/cadastro.js"></script>
+  <!-- Scripts -->
+  <script src="../js/cadastro.js"></script>
+  <script src="../js/clientes.js"></script> <!-- Seu script separado para listar os clientes -->
 </body>
 </html>

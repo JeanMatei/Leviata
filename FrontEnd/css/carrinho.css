@@ -29,6 +29,13 @@ header {
   border-bottom: 1px solid #444;
 }
 
+h2{
+  position: relative;
+  top: -30px;
+  color: #788199;
+  right: 10px;
+}
+
 nav a {
   color: #fff;
   margin: 0 15px;

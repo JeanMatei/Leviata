@@ -32,6 +32,14 @@ h1 {
     white-space: nowrap;
 }
 
+h2{
+  position: relative;
+  top: -30px;
+  color: #788199;
+  right: 10px;
+}
+
+
 h3 {
     text-align: center;
     color: #aaa;
