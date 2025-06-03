@@ -1,15 +1,11 @@
-
 body {
   background-color: #000;
   color: #fff;
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
 }
 
-h2{
-  position: relative;
-  top: -30px;
-  color: #788199;
-  right: 10px;
-}
 
 nav a {
   color: #fff;
@@ -21,19 +17,23 @@ nav a {
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .resumo {
-  width: 40%;
-  background-color: #000;
+  width: 45%; 
+  background-color: #000; 
   padding: 20px;
+  margin-bottom: 20px; 
 }
 
 .titulo-resumo {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  
 }
 
 .titulo-resumo .icone {
@@ -41,73 +41,76 @@ nav a {
   height: 25px;
   background-color: #788199;
   border-radius: 4px;
-  position: relative;
-  margin-right: 0px;
-  left: 70px;
+  margin-right: 15px; 
+  
 }
 
 .titulo-resumo h2 {
   color: #788199;
   font-size: 25px;
-  position: relative;
-  margin-left: 80px;
+  margin: 0; 
   
 }
 
 .linha {
   display: flex;
   justify-content: space-between;
-  margin: 10px 70px;
-  font-size: 15px;
-  margin-top: 100px;
-  position: relative;
-  left: 70px;
+  margin: 15px 0; 
+  font-size: 15px; 
+  padding: 5px 0; 
+  border-bottom: 1px solid #222; 
 }
 
-.subtot {
+.linha:last-child {
+    border-bottom: none; 
+}
+
+.subtot, .total {
     display: flex;
-  margin-top: 30px;
-  padding-top: 10px;
-   margin: 10px 0px;
-  position: relative;
-   justify-content: space-between;
+    justify-content: space-between;
+    margin: 15px 0; 
+    padding-top: 10px;
+    
 }
 
 .total {
-display: flex;
-border-top: 1px solid #333;
+  border-top: 1px solid #333;
   font-weight: bold;
   font-size: 16px;
-  padding-top: 5px;
-  position: relative;
-   margin: 40px 0px;
-   justify-content: space-between;
-
+  padding-top: 15px; 
+  margin-top: 25px; 
 }
 
 .pagamento-titulo {
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 30px; 
+  font-size: 18px; 
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 .formas-pagamento {
   margin-top: 10px;
   display: flex;
-  gap: 10px;
+  gap: 15px; 
   flex-wrap: wrap;
+  
+  margin-bottom: 20px; 
 }
 
 .opcao-pagamento{
   display: inline-flex;
   align-items: center;
-  padding: 5px 0px;
-  margin-right: 0px;
+  padding: 8px 12px; 
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-top: -40px;
-  position: relative;
-  left: 250px;
+  background-color: #1a1a1a; 
+  border: 1px solid #444;
+  
+}
+
+.opcao-pagamento:hover {
+    background-color: #2a2a2a;
 }
 
 .opcao-pagamento input[type="radio"] {
@@ -120,38 +123,37 @@ border-top: 1px solid #333;
   cursor: pointer;
   background-color: transparent;
   position: relative;
+  top: -1px; 
 }
 
-
 .opcao-pagamento input[type="radio"]:checked::before {
-  content: '';
+    content: "";
   position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 12px;
-  height: 12px;
+  top: 2px; 
+  left: 2px; 
+  width: 8px; 
+  height: 8px; 
   background-color: white;
   border-radius: 50%;
 }
 
-
 .opcao-pagamento img{
   display: flex;
-  height: 18px;
+  height: 20px; 
   width: auto;
-  border-radius: 4px;
-  padding: 2px;
+  margin-left: 5px; 
 }
 
 .formulario {
-  width: 50%;
+  width: 45%; 
   padding: 20px;
+  margin-bottom: 20px; 
 }
 
 .formulario input[type="text"],
 .formulario input[type="email"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px; 
   margin: 10px 0;
   background-color: #1a1a1a;
   border: 1px solid #444;
@@ -162,36 +164,54 @@ border-top: 1px solid #333;
 .formulario label {
   font-size: 14px;
   color: #ccc;
+  display: block; 
+  margin-bottom: 5px;
 }
 
 .formulario .checkbox {
-  margin-top: 10px;
+  margin-top: 15px; 
+  display: flex;
+  align-items: center;
+}
+
+.formulario .checkbox input {
+    margin-right: 8px;
 }
 
 .formulario button {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 25px; 
+  padding: 12px 25px; 
   background-color: #788199;
   border: none;
   border-radius: 4px;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.formulario button:hover {
+    background-color: #5f677a;
+}
+
 
 .main-footer {
     background-color: #111;
     color: #aaa;
     padding: 40px 20px;
-    font-size: 0.8em;
-    margin-top: 300px;
+    font-size: 0.9em; 
+    margin-top: 50px; 
+    clear: both; 
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 30px; 
+    margin-bottom: 30px; 
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-section {
@@ -200,13 +220,14 @@ border-top: 1px solid #333;
 
 .footer-section h3 {
     color: #eee;
-    margin-bottom: 10px;
-    font-size: 1em;
-    margin-left: 80px;
+    margin-bottom: 15px; 
+    font-size: 1.1em; 
+    
 }
 
-.footer-section p{
- margin-left: 80px;
+.footer-section p {
+ 
+ margin-bottom: 10px;
 }
 
 .footer-section ul {
@@ -216,8 +237,8 @@ border-top: 1px solid #333;
 }
 
 .footer-section ul li {
-    margin-bottom: 5px;
-    margin-left: 80px;
+    margin-bottom: 8px; 
+    
 }
 
 .footer-section a {
@@ -229,26 +250,38 @@ border-top: 1px solid #333;
     color: #fff;
 }
 
-
+.subscribe .input-button-wrapper {
+    display: flex;
+    width: 100%; 
+    max-width: 250px; 
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #444; 
+    
+}
 
 .subscribe input[type="email"] {
-    padding: 8px;
-    border: 1px solid #444;
-    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    background-color: #222; 
     color: #fff;
-    border-radius: 5px;
-    margin-right: 5px;
-    width: calc(100% - 100px);
-    max-width: 200px;
 }
 
 .subscribe button {
-    padding: 8px 12px;
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 0 15px; 
     cursor: pointer;
+    width: 45px;
+    background-image: url(../img/seta.png); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .download-app {
@@ -257,130 +290,88 @@ border-top: 1px solid #333;
     align-items: flex-start;
 }
 
-.download-app img {
-    max-width: 100px;
-    margin-right: 10px;
+.download-app p {
     margin-bottom: 10px;
 }
 
 .app-images {
     display: flex;
     gap: 10px;
-    background-image: url(../img/qrcode.jpg);
-    width: 80px;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 80px;
+    
+}
+
+.app-images .button-app {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
 }
 
 .image-button,
 .image-button2 {
-    display: flex;
+    display: block; 
     background-repeat: no-repeat;
-    position: relative;
-    margin-left: 90px;
-    width: 90px;
-    height: 30px;
-    border: none;
+    width: 120px; 
+    height: 40px; 
+    border: 1px solid #555; 
     padding: 0;
     cursor: pointer;
-}
-
-.image-button2 {
-    margin-top: 10px;
+    background-color: #222; 
+    border-radius: 5px;
+    
 }
 
 .googleplay-btn {
     background-image: url(../img/googleplaylogo.png);
-    background-size: cover;
-    border: 1px solid white;
-    position: relative;
-    right: 80px;
+    background-size: contain; 
+    background-position: center;
 }
 
 .appstore-btn {
     background-image: url(../img/applestorelogo.jpg);
-    background-size: cover;
-    border: 1px solid white;
-     position: relative;
-    right: 80px;
-    top: 10px;
-    
-}
-
-.social-icons a {
-    margin-right: 10px;
-    font-size: 1.2em;
-    color: #aaa;
-    position: relative;
-    left: 580px;
-    margin-top: -10px;
-}
-
-.social-icons a:hover {
-    color: #fff;
+    background-size: contain; 
+     background-position: center;
 }
 
 .footer-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    padding-top: 10px;
+    margin-top: 30px; 
+    padding-top: 20px; 
     border-top: 1px solid #222;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-icons {
+    margin-bottom: 15px; 
+    
+}
+
+.social-icons a {
+    margin: 0 8px; 
+    font-size: 1.4em; 
+    color: #aaa;
+    
+}
+
+.social-icons a:hover {
+    color: #fff;
 }
 
 .copyright {
     text-align: center;
     margin-top: 10px;
     color: #777;
+    font-size: 0.85em;
 }
 
 
-#nav-container {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    left: 750px;
-}
 
-#nav-bar {
-    display: flex;
-    gap: 60px;
-}
-
-.input-button-wrapper {
-    display: flex;
-    width: 170px;
-    height: 40px;
-    border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    margin-left: 80px;
-}
-
-.input-button-wrapper input[type="email"] {
-    flex-grow: 1;
-    border: none;
-    padding: 10px;
-    font-size: 1em;
-    outline: none;
-    margin-top: 9px;
-}
-
-.input-button-wrapper button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 0 10px;
-    cursor: pointer;
-    width: 45px;
-    background-image: url(../img/seta.png);
-    background-size: cover;
-}
-
-/* Estilos adicionados do carrinho.html */
 .resumo-produto-imagem {
     width: 40px;
     height: auto;
@@ -392,10 +383,130 @@ border-top: 1px solid #333;
 .linha span:first-child {
     display: flex; 
     align-items: center;
+    flex-grow: 1; 
+    margin-right: 10px; 
 }
 
-/* Estilo para o container da lista de produtos */
 #lista-produtos-resumo {
-    margin-bottom: 15px; /* Espaço antes do subtotal */
+    margin-bottom: 25px; 
+}
+
+
+
+@media (max-width: 992px) {
+    .container {
+        padding: 30px;
+    }
+    .resumo, .formulario {
+        width: 48%; 
+    }
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        padding: 20px;
+    }
+    .resumo, .formulario {
+        width: 100%; 
+    }
+    .titulo-resumo {
+        justify-content: center; 
+    }
+    .formas-pagamento {
+        justify-content: center; 
+    }
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    .footer-section h3, .footer-section p, .footer-section ul li {
+        margin-left: 0; 
+    }
+    .subscribe .input-button-wrapper {
+        max-width: none; 
+    }
+    .app-images {
+        margin-left: 0;
+    }
+    .social-icons {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px; 
+    }
+    .container {
+        padding: 15px;
+    }
+    .titulo-resumo h2 {
+        font-size: 22px;
+    }
+    .linha {
+        font-size: 14px;
+    }
+    .total {
+        font-size: 15px;
+    }
+    .pagamento-titulo {
+        font-size: 16px;
+    }
+    .formulario input[type="text"],
+    .formulario input[type="email"] {
+        padding: 10px;
+    }
+    .formulario button {
+        padding: 10px 20px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr 1fr; 
+    }
+    .social-icons a {
+        font-size: 1.3em;
+        margin: 0 6px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+    .titulo-resumo h2 {
+        font-size: 20px;
+    }
+    .formas-pagamento {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .opcao-pagamento {
+        width: 80%;
+        justify-content: center;
+    }
+    .footer-content {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .footer-section {
+        align-items: center;
+    }
+     .subscribe .input-button-wrapper {
+        margin: 0 auto; 
+    }
+    .app-images {
+        align-items: center;
+        margin: 0 auto;
+    }
+     .app-images .button-app {
+        align-items: center;
+    }
 }
 
