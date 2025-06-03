@@ -77,3 +77,204 @@ canvas {
   padding: 10px;
   border-radius: 8px;
 }
+
+.main-footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 40px 20px;
+    font-size: 0.8em;
+    margin-top: 300px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #eee;
+    margin-bottom: 10px;
+    font-size: 1em;
+    margin-left: 80px;
+}
+
+.footer-section p{
+ margin-left: 80px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+
+.footer-section a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+
+
+.subscribe input[type="email"] {
+    padding: 8px;
+    border: 1px solid #444;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: calc(100% - 100px);
+    max-width: 200px;
+}
+
+.subscribe button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.download-app img {
+    max-width: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.app-images {
+    display: flex;
+    gap: 10px;
+    background-image: url(../img/qrcode.jpg);
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 80px;
+}
+
+.image-button,
+.image-button2 {
+    display: flex;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 90px;
+    width: 90px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.image-button2 {
+    margin-top: 10px;
+}
+
+.googleplay-btn {
+    background-image: url(../img/googleplaylogo.png);
+    background-size: cover;
+    border: 1px solid white;
+    position: relative;
+    right: 80px;
+}
+
+.appstore-btn {
+    background-image: url(../img/applestorelogo.jpg);
+    background-size: cover;
+    border: 1px solid white;
+     position: relative;
+    right: 80px;
+    top: 10px;
+    
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #aaa;
+    position: relative;
+    left: 580px;
+    margin-top: -10px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #222;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+    color: #777;
+}
+
+
+#nav-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    left: 750px;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 60px;
+}
+
+.input-button-wrapper {
+    display: flex;
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin-left: 80px;
+}
+
+.input-button-wrapper input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    margin-top: 9px;
+}
+
+.input-button-wrapper button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    width: 45px;
+    background-image: url(../img/seta.png);
+    background-size: cover;
+}

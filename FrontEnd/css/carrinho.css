@@ -380,7 +380,7 @@ border-top: 1px solid #333;
     background-size: cover;
 }
 
-/* Estilos adicionados do carrinho.html */
+
 .resumo-produto-imagem {
     width: 40px;
     height: auto;
@@ -394,8 +394,7 @@ border-top: 1px solid #333;
     align-items: center;
 }
 
-/* Estilo para o container da lista de produtos */
 #lista-produtos-resumo {
-    margin-bottom: 15px; /* Espaço antes do subtotal */
+    margin-bottom: 15px; 
 }
 
