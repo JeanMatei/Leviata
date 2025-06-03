@@ -2,31 +2,6 @@
 body {
   background-color: #000;
   color: #fff;
-  
-}
-.search input{
-  background-color: #1a1a1a;
-  border: 1px solid #444;
-  color: #fff;
-  border-radius: 4px;
-}
-
-.search text{
-     font-size: 14px;
-  color: #ccc;
-
-}
-
-header, footer {
-  padding: 20px 40px;
-  
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #444;
 }
 
 h2{
@@ -404,3 +379,23 @@ border-top: 1px solid #333;
     background-image: url(../img/seta.png);
     background-size: cover;
 }
+
+/* Estilos adicionados do carrinho.html */
+.resumo-produto-imagem {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.linha span:first-child {
+    display: flex; 
+    align-items: center;
+}
+
+/* Estilo para o container da lista de produtos */
+#lista-produtos-resumo {
+    margin-bottom: 15px; /* Espaço antes do subtotal */
+}
+

@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add("installing");
         button.textContent = "Instalando...";
 
-        // Após 6 segundos, mudar para "instalado" com check
         setTimeout(() => {
             button.classList.remove("installing");
             button.classList.add("installed");

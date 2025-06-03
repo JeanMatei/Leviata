@@ -1,9 +1,8 @@
-// adms.js
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const listaAdms = document.getElementById('lista-adms');
 
-    // Verifica se o elemento listaAdms existe antes de tentar buscar os dados
     if (!listaAdms) {
         console.error('Elemento #lista-adms não encontrado no HTML. A lista de administradores não será carregada.');
         return;

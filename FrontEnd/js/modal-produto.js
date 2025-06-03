@@ -1,10 +1,7 @@
-// JavaScript para controlar o modal de produto
-
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modalProduto');
     const fecharModal = document.getElementById('fecharModal');
     
-    // Dados de exemplo dos produtos (você pode substituir pela sua fonte de dados)
     const produtos = {
         'jogo1': {
             nome: 'Jogo X',
@@ -26,15 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
             reviews: 28,
             descricao: 'Uma aventura emocionante com puzzles desafiadores e uma história envolvente.'
         }
-        // Adicione mais produtos conforme necessário
+        
     };
 
-    // Função para abrir o modal
     function abrirModal(produtoId) {
         const produto = produtos[produtoId];
         if (!produto) return;
 
-        // Preencher dados do modal
         document.getElementById('modalTitulo').textContent = produto.nome;
         document.getElementById('modalCategoria').textContent = produto.categoria;
         document.getElementById('modalImagem').src = produto.imagem;
@@ -43,27 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('modalPrecoOriginal').textContent = produto.precoOriginal;
         document.getElementById('modalReviews').textContent = `(${produto.reviews})`;
         
-        // Atualizar descrição
         const descricaoElement = document.querySelector('.produto-detalhe__descricao p');
         if (descricaoElement) {
             descricaoElement.textContent = produto.descricao;
         }
 
-        // Atualizar estrelas
         atualizarEstrelas(produto.estrelas);
 
-        // Mostrar modal
         modal.classList.add('ativo');
-        document.body.style.overflow = 'hidden'; // Impede scroll da página
+        document.body.style.overflow = 'hidden'; 
     }
 
-    // Função para fechar o modal
     function fecharModalFunc() {
         modal.classList.remove('ativo');
-        document.body.style.overflow = 'auto'; // Restaura scroll da página
+        document.body.style.overflow = 'auto'; 
     }
 
-    // Função para atualizar as estrelas
     function atualizarEstrelas(rating) {
         const estrelasContainer = document.getElementById('modalEstrelas');
         estrelasContainer.innerHTML = '';
@@ -71,41 +61,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const estrelasInteiras = Math.floor(rating);
         const temMeiaEstrela = rating % 1 !== 0;
         
-        // Adicionar estrelas cheias
         for (let i = 0; i < estrelasInteiras; i++) {
             estrelasContainer.innerHTML += '<i class="fas fa-star"></i>';
         }
         
-        // Adicionar meia estrela se necessário
         if (temMeiaEstrela) {
             estrelasContainer.innerHTML += '<i class="fas fa-star-half-alt"></i>';
         }
         
-        // Adicionar estrelas vazias para completar 5
         const estrelasVazias = 5 - Math.ceil(rating);
         for (let i = 0; i < estrelasVazias; i++) {
             estrelasContainer.innerHTML += '<i class="far fa-star"></i>';
         }
     }
 
-    // Event listeners
     fecharModal.addEventListener('click', fecharModalFunc);
 
-    // Fechar modal clicando fora dele
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
             fecharModalFunc();
         }
     });
 
-    // Fechar modal com tecla ESC
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('ativo')) {
             fecharModalFunc();
         }
     });
 
-    // Controles de quantidade
     const diminuirBtn = document.querySelector('.diminuir-quantidade');
     const aumentarBtn = document.querySelector('.aumentar-quantidade');
     const quantidadeSpan = document.querySelector('.produto-detalhe__quantidade-valor');
@@ -122,18 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
         quantidadeSpan.textContent = quantidade + 1;
     });
 
-    // Botão adicionar ao carrinho
     const botaoComprar = document.querySelector('.produto-detalhe__comprar');
     botaoComprar.addEventListener('click', function() {
         const quantidade = parseInt(quantidadeSpan.textContent);
         const nomeProduto = document.getElementById('modalTitulo').textContent;
         
         alert(`${nomeProduto} adicionado ao carrinho!\nQuantidade: ${quantidade}`);
-        // Aqui você pode implementar a lógica real do carrinho
         
         fecharModalFunc();
     });
 
-    // Função para ser chamada pelos cards de produto
     window.abrirModalProduto = abrirModal;
 });
