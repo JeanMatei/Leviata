@@ -1,11 +1,11 @@
-/* Seção da Biblioteca de Jogos */
+
 .game-library {
   background-color: var(--cor-cinza-escuro);
   border-radius: var(--borda-raio-md);
   padding: var(--espacamento-lg);
 }
 
-/* Cabeçalho da Biblioteca */
+
 .library-header {
   display: flex;
   align-items: center;
@@ -21,14 +21,14 @@
   margin: 0;
 }
 
-/* Grid de Jogos */
+
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: var(--espacamento-md);
 }
 
-/* Cartão de Jogo */
+
 .game-card {
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -54,7 +54,7 @@
   margin: 0;
 }
 
-/* Animação para Cartões de Jogos */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -82,7 +82,7 @@
   animation-delay: 0.3s;
 }
 
-/* Responsivo */
+
 @media (max-width: 480px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);

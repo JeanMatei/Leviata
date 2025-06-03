@@ -1,11 +1,11 @@
-/* Seção do Perfil do Usuário */
+
 .user-profile {
   background-color: var(--cor-preto);
   border-radius: var(--borda-raio-md);
   overflow: hidden;
 }
 
-/* Cabeçalho do Perfil */
+
 .profile-header {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
   color: var(--cor-cinza-200);
 }
 
-/* Formulário do Perfil */
+
 .profile-form {
   display: flex;
   flex-direction: column;
@@ -98,7 +98,7 @@
   background-color: var(--cor-cinza-600);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .profile-header {
     flex-direction: column;
