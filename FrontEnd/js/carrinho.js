@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     atualizarEstrelas(produto.estrelas);
 
-    // Ao abrir modal, verificar se o produto já está no carrinho para ajustar a quantidade
     const carrinho = obterCarrinho();
     const itemNoCarrinho = carrinho.find(item => item.id === produtoId);
     const quantidade = itemNoCarrinho ? itemNoCarrinho.quantidade : 1;
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.classList.add('ativo');
     document.body.style.overflow = 'hidden';
 
-    // Salvar o id do produto aberto no modal para usar ao adicionar ao carrinho
     modal.dataset.produtoId = produtoId;
   }
 
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     delete modal.dataset.produtoId;
   }
 
-  // Atualizar estrelas no modal
+
   function atualizarEstrelas(rating) {
     const estrelasContainer = document.getElementById('modalEstrelas');
     estrelasContainer.innerHTML = '';
@@ -87,23 +85,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Formatação para preço em R$
+
   function formatarPreco(valor) {
     return `R$ ${valor.toFixed(2).replace('.', ',')}`;
   }
 
-  // Pega o carrinho do localStorage (ou cria vazio)
   function obterCarrinho() {
     const carrinhoJSON = localStorage.getItem('carrinho');
     return carrinhoJSON ? JSON.parse(carrinhoJSON) : [];
   }
 
-  // Salva o carrinho no localStorage
+
   function salvarCarrinho(carrinho) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
   }
 
-  // Adiciona ou atualiza produto no carrinho
   function adicionarAoCarrinho(produtoId, quantidade) {
     const produto = produtos[produtoId];
     if (!produto) return false;
@@ -113,10 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemIndex = carrinho.findIndex(item => item.id === produtoId);
 
     if (itemIndex > -1) {
-      // Atualiza a quantidade (substitui pelo valor novo, não soma)
+   
       carrinho[itemIndex].quantidade = quantidade;
     } else {
-      // Novo item no carrinho
+    
       carrinho.push({
         id: produto.id,
         nome: produto.nome,
@@ -131,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
     return true;
   }
 
-  // Atualiza o resumo do pedido na página com os dados do localStorage
   function atualizarResumoPedido() {
     const carrinho = obterCarrinho();
     const containerItens = document.getElementById('itens-carrinho');
@@ -179,10 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     subtotalSpan.textContent = formatarPreco(subtotal);
-    totalSpan.textContent = formatarPreco(subtotal); // pode incluir frete, desconto, etc
+    totalSpan.textContent = formatarPreco(subtotal);
   }
 
-  // Event listeners modal e controles de quantidade
   fecharModal.addEventListener('click', fecharModalFunc);
 
   modal.addEventListener('click', function(e) {
@@ -207,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     quantidadeSpan.textContent = qtd + 1;
   });
 
-  // Botão comprar adiciona ao carrinho e fecha modal
+
   const botaoComprar = document.querySelector('.produto-detalhe__comprar');
   botaoComprar.addEventListener('click', function() {
     const qtd = parseInt(quantidadeSpan.textContent);
@@ -223,9 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Inicializa o resumo do pedido na página
+ 
   atualizarResumoPedido();
 
-  // Expõe função global para abrir modal
   window.abrirModalProduto = abrirModal;
 });
