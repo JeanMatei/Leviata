@@ -24,6 +24,7 @@
             </button>
             
             <a href="/" class="cabecalho__logo">
+                <img src="/FrontEnd/img/logo.png" alt="Leviatã">
                 <h2>Leviatã</h2>
             </a>
             
@@ -56,15 +57,13 @@
     </header>
         
 
-
     <div id="cadastro-container">
         <h1>Entre com sua conta</h1>
         <h3>Inserir seus dados abaixo!</h3>
 
-        <form>
-            <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
+        <form id="login-form"> <input type="text" id="email-telefone" name="email-telefone" placeholder="Email ou Telefone" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-            <button class="button" type="submit">Entrar </button> <a href="login.html" class="forgot-password">Esqueceu sua senha?</a></h3>
+            <button class="button" type="submit">Entrar </button> <a href="login.html" class="forgot-password">Esqueceu sua senha?</a>
         </form>
 
     </div>
@@ -77,9 +76,10 @@
                     <p>Inscreva-se</p>
                     <p>Ganhe 10% de desconto na sua primeira compra</p>
                     <div class="input-button-wrapper">
-  <input type="email" placeholder="Enter your email" />
-  <button type="submit"></button>
+  <input type="email" id="email-email" placeholder="Enter your email">
+  <button type="button" id="email-btn"></button>
 </div>
+
 
                 </div>
             </div>
@@ -131,6 +131,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="../js/login.js"></script> 
 </body>
 </html>

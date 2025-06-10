@@ -62,7 +62,7 @@ img {
   display: block;
 }
 
-/* Media queries básicas */
+
 @media (max-width: 768px) {
   :root {
     --espacamento-padrao: 0.75rem;

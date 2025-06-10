@@ -1,0 +1,144 @@
+
+.faca-main {
+    background: #000;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+
+.faca-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    gap: 32px;
+}
+
+
+.faca-contato {
+    flex: 1;
+}
+
+
+.faca-titulo {
+    color: #4b6cb7;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faca-titulo i {
+    color: #4b6cb7;
+}
+.faca-card-contato {
+    background: #222;
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.faca-contato-item {
+    margin-bottom: 24px;
+}
+
+
+.faca-contato-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+
+.faca-icone-whatsapp {
+    font-size: 1.3em;
+    color: #4b6cb7;
+    background: rgba(75, 108, 183, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faca-icone-email {
+    font-size: 1.2em;
+    color: #4b6cb7;
+    background: rgba(75, 108, 183, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.faca-contato-titulo {
+    font-weight: 600;
+    color: #fff;
+}
+
+.faca-contato-detalhes {
+    font-size: 0.95em;
+    color: #aaa;
+    margin-top: 6px;
+    padding-left: 46px;
+    line-height: 1.6;
+}
+
+
+.faca-separador {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+
+.faca-conteudo {
+    flex: 2;
+}
+
+
+.faca-card-conteudo {
+    background: #222;
+    padding: 28px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.faca-conteudo-titulo {
+    color: #4b6cb7;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faca-conteudo-titulo i {
+    color: #4b6cb7;
+}
+
+
+.faca-conteudo-texto {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1em;
+}
+
+
+@media (max-width: 768px) {
+    .faca-container {
+        flex-direction: column;
+    }
+    
+    .faca-card-contato {
+        max-width: 100%;
+    }
+}

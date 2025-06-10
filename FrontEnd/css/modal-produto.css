@@ -1,4 +1,4 @@
-/* Modal Principal */
+
 .modal {
   display: none;
   position: fixed;
@@ -28,7 +28,7 @@
   }
 }
 
-/* Conteúdo do Modal */
+
 .modal__conteudo {
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   border-radius: 20px;
@@ -53,7 +53,7 @@
   }
 }
 
-/* Botão Fechar */
+
 .modal__fechar {
   position: absolute;
   top: 20px;
@@ -76,7 +76,7 @@
   transform: rotate(90deg);
 }
 
-/* Layout do Produto */
+
 .produto-detalhe {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,7 +85,7 @@
   color: #fff;
 }
 
-/* Imagem do Produto */
+
 .produto-detalhe__imagem {
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
   z-index: 1;
 }
 
-/* Informações do Produto */
+
 .produto-detalhe__info {
   display: flex;
   flex-direction: column;
@@ -171,7 +171,7 @@
   font-size: 14px;
 }
 
-/* Preços */
+
 .produto-detalhe__preco {
   display: flex;
   align-items: center;
@@ -191,14 +191,14 @@
   text-decoration: line-through;
 }
 
-/* Descrição */
+
 .produto-detalhe__descricao {
   color: #d1d5db;
   line-height: 1.6;
   font-size: 14px;
 }
 
-/* Ações do Produto */
+
 .produto-detalhe__acoes {
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@
   text-align: center;
 }
 
-/* Botão de Compra */
+
 .produto-detalhe__comprar {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6);
   border: none;
@@ -271,7 +271,7 @@
   transform: translateY(0);
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .modal__conteudo {
     margin: 20px;

@@ -20,7 +20,6 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
                         <h3 class="produto__nome">Hollow Knight</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
@@ -39,16 +38,17 @@
                             <span class="preco__original">R$ 120</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
+                         <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'hollow-knight')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao carrinho
+                    </button>
                         </div>
                     </div>
                 </article>
                 
                 <article class="produto">
                     <div class="produto__imagem">
-                        <img src="../img/five.png" alt="Hollow Knight">
+                        <img src="../img/five.png" alt="FNAF: Into the Pit">
                         <div class="produto__acoes">
                             <button class="produto__acao" aria-label="Adicionar aos favoritos">
                                 <i class="far fa-heart"></i>
@@ -59,8 +59,7 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
+                        <h3 class="produto__nome">FNAF: Into the Pit</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
                                     <i class="fas fa-star"></i>
@@ -69,17 +68,96 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <span class="produto__reviews">(99)</span>
+                                <span class="produto__reviews">(48)</span>
                                 </div>
 
 
                         <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
+                            <span class="preco__atual">R$59,99</span>
+                            <span class="preco__original">R$112,00</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'fnaf-into-the-pit')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/cup.png" alt="CupHead">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">CupHead</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(59)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$36,99</span>
+                            <span class="preco__original">R$95,00</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'cuphead')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/kata.png" alt="Katana ZERO">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">Katana ZERO</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(37)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$46,99</span>
+                            <span class="preco__original">R$74,50</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'katana-zero')">
                                 <i class="fas fa-shopping-cart"></i>
+                                Adicionar ao carrinho
                             </button>
                         </div>
                     </div>
@@ -87,7 +165,7 @@
 
                 <article class="produto">
                     <div class="produto__imagem">
-                        <img src="../img/cup.png" alt="Hollow Knight">
+                        <img src="../img/castle.png" alt="Castle Crashers">
                         <div class="produto__acoes">
                             <button class="produto__acao" aria-label="Adicionar aos favoritos">
                                 <i class="far fa-heart"></i>
@@ -98,8 +176,7 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
+                        <h3 class="produto__nome">Castle Crashers</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
                                     <i class="fas fa-star"></i>
@@ -108,17 +185,18 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <span class="produto__reviews">(99)</span>
+                                <span class="produto__reviews">(28)</span>
                                 </div>
 
 
                         <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
+                            <span class="preco__atual">R$55,96</span>
+                            <span class="preco__original">R$112,00</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'castle-crashers')">
                                 <i class="fas fa-shopping-cart"></i>
+                                Adicionar ao carrinho
                             </button>
                         </div>
                     </div>
@@ -126,7 +204,7 @@
 
                 <article class="produto">
                     <div class="produto__imagem">
-                        <img src="../img/kata.png" alt="Hollow Knight">
+                        <img src="../img/mine.png" alt="Minecraft">
                         <div class="produto__acoes">
                             <button class="produto__acao" aria-label="Adicionar aos favoritos">
                                 <i class="far fa-heart"></i>
@@ -137,8 +215,7 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
+                        <h3 class="produto__nome">Minecraft</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
                                     <i class="fas fa-star"></i>
@@ -147,103 +224,26 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <span class="produto__reviews">(99)</span>
+                                <span class="produto__reviews">(106)</span>
                                 </div>
 
 
                         <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
+                            <span class="preco__atual">R$74,95</span>
+                            <span class="preco__original">R$92,50</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="produto">
-                    <div class="produto__imagem">
-                        <img src="../img/castle.png" alt="Hollow Knight">
-                        <div class="produto__acoes">
-                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class="produto__acao" aria-label="Ver detalhes">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
-                            <div class="produto__avaliacao">
-                                <div class="estrelas">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="produto__reviews">(99)</span>
-                                </div>
-
-
-                        <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
-                        </div>
-                        <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="produto">
-                    <div class="produto__imagem">
-                        <img src="../img/mine.png" alt="Hollow Knight">
-                        <div class="produto__acoes">
-                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class="produto__acao" aria-label="Ver detalhes">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
-                            <div class="produto__avaliacao">
-                                <div class="estrelas">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="produto__reviews">(99)</span>
-                                </div>
-
-
-                        <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
-                        </div>
-                        <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'minecraft')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
                         </div>
                     </div>
                 </article>
 
                  <article class="produto">
                     <div class="produto__imagem">
-                        <img src="../img/zombies.png" alt="Hollow Knight">
+                        <img src="../img/zombies.png" alt="Plants vs. Zombies">
                         <div class="produto__acoes">
                             <button class="produto__acao" aria-label="Adicionar aos favoritos">
                                 <i class="far fa-heart"></i>
@@ -254,8 +254,7 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
+                        <h3 class="produto__nome">Plants vs. Zombies</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
                                     <i class="fas fa-star"></i>
@@ -264,25 +263,26 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <span class="produto__reviews">(99)</span>
+                                <span class="produto__reviews">(86)</span>
                                 </div>
 
 
                         <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
+                            <span class="preco__atual">R$43,99</span>
+                            <span class="preco__original">R$68,00</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'plants-vs-zombies')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
                         </div>
                     </div>
                 </article>
             
                  <article class="produto">
                     <div class="produto__imagem">
-                        <img src="../img/celeste.png" alt="Hollow Knight">
+                        <img src="../img/celeste.png" alt="Celeste">
                         <div class="produto__acoes">
                             <button class="produto__acao" aria-label="Adicionar aos favoritos">
                                 <i class="far fa-heart"></i>
@@ -293,8 +293,7 @@
                         </div>
                     </div>
                     <div class="produto__info">
-                        <div class="produto__categoria">RPG</div>
-                        <h3 class="produto__nome">Hollow Knight</h3>
+                        <h3 class="produto__nome">Celeste</h3>
                             <div class="produto__avaliacao">
                                 <div class="estrelas">
                                     <i class="fas fa-star"></i>
@@ -308,16 +307,174 @@
 
 
                         <div class="produto__preco">
-                            <span class="preco__atual">R$ 84</span>
-                            <span class="preco__original">R$ 120</span>
+                            <span class="preco__atual">R$59,99</span>
+                            <span class="preco__original">R$85,00</span>
                         </div>
                         <div class="produto__rodape">
-                            <button class="botao botao--icone" aria-label="Adicionar ao carrinho">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'celeste')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
                         </div>
                     </div>
                 </article>
-            
-            
-            
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/balatro.png" alt="Celeste">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">Balatro</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(69)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$49,59</span>
+                            <span class="preco__original">R$85,00</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'celeste')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/out.png" alt="Celeste">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">Outlast</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(49)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$59,99</span>
+                            <span class="preco__original">R$105,00</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'celeste')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/sifu.png" alt="Celeste">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">Sifu</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(26)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$59,99</span>
+                            <span class="preco__original">R$85,00</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'celeste')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto__imagem">
+                        <img src="../img/limbo.png" alt="Celeste">
+                        <div class="produto__acoes">
+                            <button class="produto__acao" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="produto__acao" aria-label="Ver detalhes">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto__info">
+                        <h3 class="produto__nome">Limbo</h3>
+                            <div class="produto__avaliacao">
+                                <div class="estrelas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="produto__reviews">(99)</span>
+                                </div>
+
+
+                        <div class="produto__preco">
+                            <span class="preco__atual">R$29,50</span>
+                            <span class="preco__original">R$55,00</span>
+                        </div>
+                        <div class="produto__rodape">
+                           <button class="botao botao--carrinho" onclick="adicionarOfertaAoCarrinho(event, 'celeste')">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao carrinho
+                        </button>
+                        </div>
+                    </div>
+                </article>
+            </div> 
+            <script src="../js/ofertas.js" defer></script>
+        </section>
+

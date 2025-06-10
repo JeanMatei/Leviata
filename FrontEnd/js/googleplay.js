@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("installBtn");
+  const button = document.getElementById("installBtn");
 
-    button.addEventListener("click", function () {
-        // Evita múltiplos cliques
-        if (button.classList.contains("installing") || button.classList.contains("installed")) return;
+  button.addEventListener("click", function () {
+    if (
+      button.classList.contains("installing") ||
+      button.classList.contains("installed")
+    )
+      return;
 
-        // Muda para "instalando..."
-        button.classList.add("installing");
-        button.textContent = "Instalando...";
+    button.classList.add("installing");
+    button.textContent = "Instalando...";
 
-        // Após 6 segundos, mudar para "instalado" com check
-        setTimeout(() => {
-            button.classList.remove("installing");
-            button.classList.add("installed");
-            button.innerHTML = 'Instalado <span class="checkmark">✔</span>';
-        }, 4000);
-    });
+    setTimeout(() => {
+      button.classList.remove("installing");
+      button.classList.add("installed");
+      button.innerHTML = 'Instalado <span class="checkmark">✔</span>';
+    }, 4000);
+  });
 });

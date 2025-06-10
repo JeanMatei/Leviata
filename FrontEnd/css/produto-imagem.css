@@ -1,0 +1,31 @@
+
+.produto img {
+  width: 274px;
+  height: 411px;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto; 
+}
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+.produto-detalhe__imagem img {
+  width: 274px;
+  height: 411px;
+  object-fit: cover;
+  max-height: none; 
+  margin: 0 auto; 
+}
+.produto__imagem {
+  height: 411px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%; 
+}
+.ofertas__grid {
+  justify-content: center; 
+}

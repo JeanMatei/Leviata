@@ -1,59 +1,59 @@
+document.addEventListener('DOMContentLoaded', () => {
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    const emailTelefoneInput = document.getElementById('email-telefone');
-    const senhaInput = document.getElementById('senha');
+    const loginForm = document.getElementById('login-form'); 
 
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
+    console.log('Status de carregamento do formulário de login:', loginForm ? 'Encontrado' : 'NÃO ENCONTRADO!');
 
-      const emailTelefone = emailTelefoneInput.value.trim();
-      const senha = senhaInput.value.trim();
+    if (loginForm) { 
+        loginForm.addEventListener('submit', function(event) {
+          
+            event.preventDefault();
 
-      if (!emailTelefone || !senha) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-      }
+            const email = document.getElementById('email-telefone').value.trim();
+            const senha = document.getElementById('senha').value.trim();
 
-      if (senha.length < 6) {
-        alert('A senha deve ter pelo menos 6 caracteres.');
-        return;
-      }
+            if (email === '' || senha === '') {
+                alert('Por favor, preencha todos os campos!');
+                return; 
+            }
 
-      // Simulação de login
-      alert('Login realizado com sucesso!');
-      form.reset();
-    });
+            const regexEmail = /^[^\s@]+@(hotmail\.com|gmail\.com)$/i;
+            if (!regexEmail.test(email)) {
+                alert('Insira um email válido que termine com @hotmail.com ou @gmail.com.');
+                return; 
+            }
 
-    // Newsletter no rodapé
-    const newsletterInput = document.querySelector('.input-button-wrapper input[type="email"]');
-    const newsletterButton = document.querySelector('.input-button-wrapper button');
+            if (senha.length < 6) {
+                alert('A senha deve ter no mínimo 6 caracteres.');
+                return; 
+            }
 
-    if (newsletterButton) {
-      newsletterButton.addEventListener('click', function (e) {
-        e.preventDefault();
-        const email = newsletterInput.value.trim();
+            if (email.toLowerCase() === 'teste@hotmail.com' && senha === '123456') {
+                alert('Login bem-sucedido!');
 
-        if (!validateEmail(email)) {
-          alert('Por favor, insira um e-mail válido para se inscrever.');
-          return;
+                window.location.href = 'index.html'; 
+            } else {
+                alert('Email ou senha incorretos!');
+            }
+        });
+    } else {
+        console.error('ERRO: O formulário de login com ID "login-form" não foi encontrado. Por favor, verifique se o ID está correto no seu HTML.');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('email-btn');
+    const input = document.getElementById('email-email');
+
+    btn.addEventListener('click', () => {
+        const email = input.value.trim();
+        const emailValido = /^[^\s@]+@(hotmail\.com|gmail\.com)$/i.test(email);
+
+        if (!emailValido) {
+            alert('Por favor, insira um e-mail válido que termine com @hotmail.com ou @gmail.com.');
+        } else {
+            alert(`Obrigado por se inscrever, ${email}!`);
+            window.location.href = 'index.html';
         }
-
-        alert(`Obrigado por se inscrever com o e-mail: ${email}`);
-        newsletterInput.value = '';
-      });
-    }
-
-    function validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email.toLowerCase());
-    }
-
-    // Botões de download de app
-    document.querySelectorAll('.googleplay-btn, .appstore-btn').forEach(btn => {
-      btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        alert('Redirecionando para a loja...');
-      });
     });
-  });
+});
