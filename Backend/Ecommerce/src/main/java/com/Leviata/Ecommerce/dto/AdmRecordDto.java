@@ -9,4 +9,6 @@ public record AdmRecordDto(
         @NotBlank String senha,
         @NotBlank String nm_empresa,
         @NotBlank String whatsapp
-) {}
+) {
+
+}
